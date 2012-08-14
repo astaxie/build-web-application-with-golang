@@ -1,4 +1,9 @@
-build-web-application-with-golang
-=================================
+# 《build web application with golang》
+2012年因兴趣建立此项目，希望通过写这本书让更多人能够认识go，而且能够学习到go的思想
 
-a golang ebook intro how to build a web with golang
+## 撰写方法
+### 文件命名
+每个章节建立一个md文件，如第11章的第3节，则建立**11.3.md**。
+
+## 格式规范
+请参看已有章节的规范, 要注意的是, 每个章节在底部都需要有一个links节, 包含"目录", "上一节", "下一节"的链接
