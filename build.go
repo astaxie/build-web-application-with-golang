@@ -6,32 +6,51 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 //定义一个访问者结构体
 type Visitor struct{}
 
-//定义其碰到目录的时候的行为
-func (v *Visitor) VisitDir(path string, f *os.FileInfo) bool {
-	fmt.Println(path)
-	return true
-}
-
-//定义其碰到文件的时候的行为
-func (v *Visitor) VisitFile(path string, f *os.FileInfo) {
-	fmt.Println(path)
-	//@todo 如何读取md文件转化为html
-	input, err := ioutil.ReadAll()
-	output := blackfriday.MarkdownBasic(input)
+func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
+	if f == nil {
+		return err
+	}
+	if f.IsDir() {
+		return nil
+	} else if (f.Mode() & os.ModeSymlink) > 0 {
+		return nil
+	} else {
+		if strings.Contains(f.Name(), ".md") {
+			fmt.Println(f)
+			file, err := os.Open(f.Name())
+			if err != nil {
+				return err
+			}
+			input, _ := ioutil.ReadAll(file)
+			output := blackfriday.MarkdownCommon(input)
+			var out *os.File
+			if out, err = os.Create(f.Name() + ".html"); err != nil {
+				fmt.Fprintf(os.Stderr, "Error creating %s: %v", f.Name(), err)
+				os.Exit(-1)
+			}
+			defer out.Close()
+			if _, err = out.Write(output); err != nil {
+				fmt.Fprintln(os.Stderr, "Error writing output:", err)
+				os.Exit(-1)
+			}
+		}
+	}
+	return nil
 }
 
 func main() {
 	v := &Visitor{}
-	errors := make(chan os.Error, 64) //错误消息使用64个缓存，可以随意
-	filepath.Walk("./", v, errors)
-	select {
-	case err := <-errors:
-		panic(err)
-	default:
+	err := filepath.Walk("./", func(path string, f os.FileInfo, err error) error {
+		return v.visit(path, f, err)
+	})
+
+	if err != nil {
+		fmt.Printf("filepath.Walk() returned %v\n", err)
 	}
 }
