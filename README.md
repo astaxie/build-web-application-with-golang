@@ -15,4 +15,4 @@
  - Hong Ruiqi
 
 ##开始阅读
-[开始阅读](preface.md)
+[开始阅读](build-web-application-with-golang/blob/master/preface.md)
