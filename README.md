@@ -14,8 +14,9 @@
 ##致谢
 首先要感谢golang的QQ群102319854，里面的每一个人都很热心，同时要特别感谢几个人
 
- - 四月份平民
- - Hong Ruiqi
+ - 四月份平民 (review代码)
+ - Hong Ruiqi  (review代码)
+ - [BianJiang](https://github.com/border) (编写Vim和Emacs)
 
 ##开始阅读
 [开始阅读](build-web-application-with-golang/blob/master/preface.md)
