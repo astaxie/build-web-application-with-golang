@@ -19,4 +19,4 @@
  - [BianJiang](https://github.com/border) (编写go开发工具Vim和Emacs的设置)
 
 ##开始阅读
-[开始阅读](preface.md)
+[开始阅读](blob/master/preface.md)
