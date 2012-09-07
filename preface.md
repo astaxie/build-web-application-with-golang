@@ -26,12 +26,14 @@
  - 4.4 [防止多次递交表单](4.4.md)
  - 4.5 [处理文件上传](4.5.md)
  - 4.6 [小结](4.6.md)
-* 5.访问数据库
- - 5.1 database/sql接口
- - 5.2 使用mysql数据库
- - 5.3 使用sqlite数据库
- - 5.4 使用beedb库进行ORM开发
- - 5.5 NOSQL数据库操作
+* 5.[访问数据库](5.md)
+ - 5.1 [database/sql接口](5.1.md)
+ - 5.2 [使用MySQL数据库](5.2.md)
+ - 5.3 [使用SQLite数据库](5.3.md)
+ - 5.4 [使用PostgreSQL数据库](5.4.md)
+ - 5.5 [使用beedb库进行ORM开发](5.5.md)
+ - 5.6 [NOSQL数据库操作](5.6.md)
+ - 5.7 [小结](5.7.md)
 * 6.session和数据存储
  - 6.1 session和cookie
  - 6.2 Go如何使用session
