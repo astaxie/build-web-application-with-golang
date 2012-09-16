@@ -34,18 +34,24 @@
  - 5.5 [使用beedb库进行ORM开发](5.5.md)
  - 5.6 [NOSQL数据库操作](5.6.md)
  - 5.7 [小结](5.7.md)
-* 6.session和数据存储
- - 6.1 session和cookie
- - 6.2 Go如何使用session
- - 6.3 预防session劫持
- - 6.4 session存储 
-* 7.Web服务
- - 7.1 webSockets
- - 7.2 REST
- - 7.3 RPC
-* 8.XML和Json处理
- - 8.1 XML处理
- - 8.2 Json处理
+* 6.[session和数据存储](6.md)
+ - 6.1 [session和cookie](6.1.md)
+ - 6.2 [Go如何使用session](6.2.md)
+ - 6.3 [预防session劫持](6.3.md)
+ - 6.4 [session存储](6.4.md) 
+ - 6.5 [小结](6.5.md)
+* 7.文本处理
+ - 7.1 XML处理
+ - 7.2 Json处理 
+ - 7.3 正则处理
+ - 7.4 模板处理
+ - 7.5 小结
+* 8.Web服务
+ - 8.1 webSockets
+ - 8.2 Socket编程
+ - 8.3 REST
+ - 8.4 RPC
+ - 8.5 小结
 * 9.安全与加密
  - 9.1 预防session
  - 9.2 避免SQL注入
