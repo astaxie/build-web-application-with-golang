@@ -21,7 +21,7 @@ func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 	} else if (f.Mode() & os.ModeSymlink) > 0 {
 		return nil
 	} else {
-		if strings.Contains(f.Name(), ".md") {
+		if strings.HasSuffix(f.Name(), ".md") {
 			fmt.Println(f)
 			file, err := os.Open(f.Name())
 			if err != nil {
