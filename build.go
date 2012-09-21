@@ -21,7 +21,7 @@ func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 	} else if (f.Mode() & os.ModeSymlink) > 0 {
 		return nil
 	} else {
-		if strings.Contains(f.Name(), ".md") {
+		if strings.HasSuffix(f.Name(), ".md") {
 			fmt.Println(f)
 			file, err := os.Open(f.Name())
 			if err != nil {
@@ -30,7 +30,7 @@ func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 			input, _ := ioutil.ReadAll(file)
 			output := blackfriday.MarkdownCommon(input)
 			var out *os.File
-			if out, err = os.Create(f.Name() + ".html"); err != nil {
+			if out, err = os.Create(strings.Replace(f.Name(),".md",".html",-1) ); err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating %s: %v", f.Name(), err)
 				os.Exit(-1)
 			}
