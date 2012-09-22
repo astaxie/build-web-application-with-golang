@@ -32,7 +32,7 @@
 目前可以把相应的Markdown编译成html文件，执行`go build build.go`，执行生成的文件，就会在底目录下生成相应的html文件。
 
 ##致谢
-首先要感谢golang的QQ群102319854，里面的每一个人都很热心，同时要特别感谢几个人
+首先要感谢Golang-China的QQ群102319854，里面的每一个人都很热心，同时要特别感谢几个人
 
  - [四月份平民](https://plus.google.com/110445767383269817959) (review代码)
  - [Hong Ruiqi](https://github.com/hongruiqi) (review代码)
@@ -41,10 +41,10 @@
  - [Wenlei Wu](mailto:spadesacn@gmail.com)(提供一些图片展示)
 
 ##授权许可
-除特别声明外，本书中的内容使用[CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)（创作共用 署名-相同方式共享3.0许可协议）授权，代码遵循[BSD 3-Clause License](<LICENSE.md>)（3项条款的BSD许可协议）。
+除特别声明外，本书中的内容使用[CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)（创作共用 署名-相同方式共享3.0许可协议）授权，代码遵循[BSD 3-Clause License](<./LICENSE.md>)（3项条款的BSD许可协议）。
 
 ##开始阅读
-[开始阅读](https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md)
+[开始阅读](./preface.md)
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/44c98c9d398b8319b6e87edcd3e34144 "githalytics.com")](http://githalytics.com/astaxie/build-web-application-with-golang)
