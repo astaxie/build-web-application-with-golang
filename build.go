@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-//定义一个访问者结构体
+// 定义一个访问者结构体
 type Visitor struct{}
 
 func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
@@ -30,7 +30,7 @@ func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 			input, _ := ioutil.ReadAll(file)
 			output := blackfriday.MarkdownCommon(input)
 			var out *os.File
-			if out, err = os.Create(strings.Replace(f.Name(),".md",".html",-1) ); err != nil {
+			if out, err = os.Create(strings.Replace(f.Name(), ".md", ".html", -1)); err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating %s: %v", f.Name(), err)
 				os.Exit(-1)
 			}
