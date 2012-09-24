@@ -37,8 +37,8 @@
 * 6.[session和数据存储](6.md)
  - 6.1 [session和cookie](6.1.md)
  - 6.2 [Go如何使用session](6.2.md)
- - 6.3 [预防session劫持](6.3.md)
- - 6.4 [session存储](6.4.md) 
+ - 6.3 [session存储](6.3.md)
+ - 6.4 [预防session劫持](6.4.md) 
  - 6.5 [小结](6.5.md)
 * 7.文本处理
  - 7.1 XML处理
