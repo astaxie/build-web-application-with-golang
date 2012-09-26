@@ -41,10 +41,10 @@
  - [Wenlei Wu](mailto:spadesacn@gmail.com)(提供一些图片展示)
 
 ##授权许可
-除特别声明外，本书中的内容使用[CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)（创作共用 署名-相同方式共享3.0许可协议）授权，代码遵循[BSD 3-Clause License](<LICENSE.md>)（3项条款的BSD许可协议）。
+除特别声明外，本书中的内容使用[CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)（创作共用 署名-相同方式共享3.0许可协议）授权，代码遵循[BSD 3-Clause License](<https://github.com/OlingCat/build-web-application-with-golang/blob/master/LICENSE.md>)（3项条款的BSD许可协议）。
 
 ##开始阅读
-[开始阅读](<preface.md>)
+[开始阅读](<https://github.com/OlingCat/build-web-application-with-golang/blob/master/preface.md>)
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/44c98c9d398b8319b6e87edcd3e34144 "githalytics.com")](http://githalytics.com/astaxie/build-web-application-with-golang)
