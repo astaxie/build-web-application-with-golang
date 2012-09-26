@@ -1,0 +1,9 @@
+# Compiled files.
+*.exe
+*.html
+*.ps
+*.eps
+*.pdf
+*.aux
+*.log
+.gitignore
