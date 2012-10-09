@@ -48,7 +48,7 @@
  - 7.5 [小结](7.5.md)
 * 8.[Web服务](8.md)
  - 8.1 [Socket编程](8.1.md)
- - 8.2 [webSockets](8.2.md)
+ - 8.2 [WebSocket](8.2.md)
  - 8.3 [REST](8.3.md)
  - 8.4 [RPC](8.4.md)
  - 8.5 [小结](8.5.md)
