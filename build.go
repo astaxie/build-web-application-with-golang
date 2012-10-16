@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"regexp"
 )
 
 // 定义一个访问者结构体
@@ -28,6 +29,7 @@ func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 				return err
 			}
 			input, _ := ioutil.ReadAll(file)
+			input = regexp.MustCompile("\\[(.*?)\\]\\(<?(.*?)\\.md>?\\)").ReplaceAll(input, []byte("[$1](<$2.html>)"))
 			output := blackfriday.MarkdownCommon(input)
 			var out *os.File
 			if out, err = os.Create(strings.Replace(f.Name(), ".md", ".html", -1)); err != nil {
