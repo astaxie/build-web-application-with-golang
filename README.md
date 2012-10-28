@@ -1,4 +1,4 @@
-#《Go Web 编程》
+# 《Go Web 编程》
 因为自己对Web开发比较感兴趣，所以最近抽空在写一本开源的书籍《Go Web编程》《Build Web Application with Golang》。写这本书不表示我能力很强，而是我愿意分享，和大家一起分享Go写Web应用的一些东西。
 
 - 对于从PHP/Python/Ruby转过来的同学了解Go怎么写Web应用开发的
@@ -21,22 +21,22 @@
 ### 代码
 代码要**`go fmt`**后提交。注释文件注明其所属章节。
 
-##如何编译
+## 如何编译
 `build.go`依赖markdown的一个解析包，所以第一步先
 
 	go get github.com/russross/blackfriday
 
 这样读者就可以把相应的Markdown文件编译成html文件，执行`go build build.go`，执行生成的文件，就会在底目录下生成相应的html文件
 
-##如何编译
+## 如何编译
 目前可以把相应的Markdown编译成html文件，执行`go build build.go`，执行生成的文件，就会在底目录下生成相应的html文件。
 
-##交流
+## 交流
 欢迎大家加入QQ群：259316004 《Go Web编程》专用交流群
 
 大家有问题还可以上德问上一起交流学习：http://www.dewen.org/topic/165
 
-##致谢
+## 致谢
 首先要感谢Golang-China的QQ群102319854，里面的每一个人都很热心，同时要特别感谢几个人
 
  - [四月份平民](https://plus.google.com/110445767383269817959) (review代码)
@@ -45,10 +45,10 @@
  - [Oling Cat](https://github.com/OlingCat)(review代码)
  - [Wenlei Wu](mailto:spadesacn@gmail.com)(提供一些图片展示)
 
-##授权许可
+## 授权许可
 除特别声明外，本书中的内容使用[CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)（创作共用 署名-相同方式共享3.0许可协议）授权，代码遵循[BSD 3-Clause License](<https://github.com/astaxie/build-web-application-with-golang/blob/master/LICENSE.md>)（3项条款的BSD许可协议）。
 
-##开始阅读
+## 开始阅读
 [开始阅读](<https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md>)
 
 
