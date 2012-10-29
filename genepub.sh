@@ -9,13 +9,13 @@ fi
 cd html
 cp ../*.md .
 for i in *.md;do
-	#é‡æ–°æ ¼å¼åŒ–mdæ–‡ä»¶
+	#ÖØĞÂ¸ñÊ½»¯mdÎÄ¼ş
 	sed -i  '/^[#]\{1,\}/s!^\([#]\{1,\}\)\([^#]\{1,\}\)!\1 \2!' $i
 	sed -i  '/^[#]\{1,\}/s!  ! !' $i
-	#å¤„ç†mdæ–‡ä»¶ä¸­çš„image srcå±æ€§
+	#´¦ÀímdÎÄ¼şÖĞµÄimage srcÊôĞÔ
 	sed -i  '/!\[\](images/s#images\(.*\)?raw=true#../Images\1#' $i
 
 done
 ../build-web-application-with-golang >/dev/null
 rm *.md
-echo "æ–‡ä»¶å·²ç»å°±ç»ªï¼Œè¯·ä½¿ç”¨sigilå¯¼å…¥htmlç›®å½•ä¸­çš„htmlæ–‡ä»¶å’Œimagesç›®å½•ä¸­çš„å›¾ç‰‡æ–‡ä»¶ï¼Œåˆ¶ä½œepub"
+echo "ÎÄ¼şÒÑ¾­¾ÍĞ÷£¬ÇëÊ¹ÓÃsigilµ¼ÈëhtmlÄ¿Â¼ÖĞµÄhtmlÎÄ¼şºÍimagesÄ¿Â¼ÖĞµÄÍ¼Æ¬ÎÄ¼ş£¬ÖÆ×÷epub"
