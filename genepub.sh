@@ -13,5 +13,5 @@ for i in *.md;do
 	sed -i  '/!\[\](images/s#images\(.*\)?raw=true#../Images\1#' $i
 
 done
-../build-web-application-with-golang
-rm *.md
+cd ../build-web-application-with-golang
+rm -rf *.md
