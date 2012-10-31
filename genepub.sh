@@ -1,21 +1,32 @@
-#!/bin/sh
-if [ ! -f build-web-application-with-golang ];then
-	go build
+#!/bin/bash
+if ! which pandoc >/dev/null ;then
+	echo "è¯·å…ˆå®‰è£…pandocï¼Œç„¶åå†æ¬¡è¿è¡Œ"
+	exit 0
 fi
-
-if [ ! -d html ];then
-	mkdir html 
-fi
-cd html
-cp ../*.md .
+[ -f build-web-application-with-golang ] && go build
+[ -d html ] || mkdir html
+pushd html >/dev/null; cp ../*.md .
+sed -i 's!https://github.com/astaxie/build-web-application-with-golang/blob/master/!!g' README.md
 for i in *.md;do
-	#ÖØĞÂ¸ñÊ½»¯mdÎÄ¼ş
-	sed -i  '/^[#]\{1,\}/s!^\([#]\{1,\}\)\([^#]\{1,\}\)!\1 \2!' $i
-	sed -i  '/^[#]\{1,\}/s!  ! !' $i
-	#´¦ÀímdÎÄ¼şÖĞµÄimage srcÊôĞÔ
-	sed -i  '/!\[\](images/s#images\(.*\)?raw=true#../Images\1#' $i
-
+	#é‡æ–°æ ¼å¼åŒ–mdæ–‡ä»¶
+	sed -i  '/^[#]\{1,\}/s!^\([#]\{1,\}\)\([^#]\{1,\}\)!\1 \2!' $i #ä»¥#å¼€å¤´çš„è¡Œï¼Œåœ¨#åå¢åŠ ç©ºæ ¼
+	sed -i  '/^[#]\{1,\}/s!  ! !' $i  #ä»¥#å¼€å¤´çš„è¡Œ, åˆ é™¤å¤šä½™çš„ç©ºæ ¼
+	#sed -i  '/!\[\](images/s#images\(.*\)?raw=true#../Images\1#' $i
+	sed -i  '/!\[\](images/s#images\(.*\)?raw=true#../images\1#' $i #å¤„ç†mdæ–‡ä»¶ä¸­çš„image srcå±æ€§
+	sed -i '/[#]\{2,\} links/,/[ ]\{0,\}Id\$.*/d' $i #åˆ é™¤é¡µé¢é“¾æ¥
 done
 ../build-web-application-with-golang >/dev/null
-rm *.md
-echo "ÎÄ¼şÒÑ¾­¾ÍĞ÷£¬ÇëÊ¹ÓÃsigilµ¼ÈëhtmlÄ¿Â¼ÖĞµÄhtmlÎÄ¼şºÍimagesÄ¿Â¼ÖĞµÄÍ¼Æ¬ÎÄ¼ş£¬ÖÆ×÷epub"
+list="README.html `ls [1-9]*.html |sort -h` LICENSE.html"
+cat > metadata.txt <<EOF
+<dc:creator>Astaxie</dc:creator>
+<dc:description>ä¸€æœ¬å¼€æºçš„Go Webç¼–ç¨‹ä¹¦ç±</dc:description>
+<dc:language>zh-CN</dc:language>
+<dc:rights>Creative Commons</dc:rights>
+<dc:title>Go Webç¼–ç¨‹</dc:title>
+EOF
+
+pandoc --reference-links -S --toc -f html -t epub --epub-metadata=metadata.txt --epub-cover-image=../images/cover.png \
+-o ../build-web-application-with-golang.epub $list
+popd >/dev/null
+rm -rf html
+echo "build-web-application-with-golang.epub å·²ç»å»ºç«‹"
