@@ -30,9 +30,6 @@
 
 这样读者就可以把相应的Markdown文件编译成html文件，执行`go build build.go`，执行生成的文件，就会在底目录下生成相应的html文件
 
-## 如何编译
-目前可以把相应的Markdown编译成html文件，执行`go build build.go`，执行生成的文件，就会在底目录下生成相应的html文件。
-
 ## 交流
 欢迎大家加入QQ群：259316004 《Go Web编程》专用交流群
 
