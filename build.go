@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"strings"
 	"regexp"
+	"strings"
 )
 
 // 定义一个访问者结构体
@@ -37,10 +37,14 @@ func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 				os.Exit(-1)
 			}
 			defer out.Close()
+			header := "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\"/>\n</head>\n"
+			footer := "</html>\n"
+			out.Write([]byte(header))
 			if _, err = out.Write(output); err != nil {
 				fmt.Fprintln(os.Stderr, "Error writing output:", err)
 				os.Exit(-1)
 			}
+			out.Write([]byte(footer))
 		}
 	}
 	return nil
