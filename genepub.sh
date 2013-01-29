@@ -3,7 +3,7 @@ if ! which pandoc >/dev/null ;then
 	echo "请先安装pandoc，然后再次运行"
 	exit 0
 fi
-[ -f build-web-application-with-golang ] && go build
+[ -f build-web-application-with-golang ] || go build
 [ -d html ] || mkdir html
 pushd html >/dev/null; cp ../*.md .
 sed -i 's!https://github.com/astaxie/build-web-application-with-golang/blob/master/!!g' README.md
