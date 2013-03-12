@@ -16,7 +16,7 @@ for i in *.md;do
 	sed -i '/[#]\{2,\} links/,/[ ]\{0,\}Id\$.*/d' $i #删除页面链接
 done
 ../build-web-application-with-golang >/dev/null
-list="README.html `ls [1-9]*.html |sort -h` LICENSE.html"
+list="README.html `ls [0-9]*.html |sort -h` LICENSE.html"
 cat > metadata.txt <<EOF
 <dc:creator>Astaxie</dc:creator>
 <dc:description>一本开源的Go Web编程书籍</dc:description>
