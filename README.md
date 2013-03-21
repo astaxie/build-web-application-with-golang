@@ -14,24 +14,6 @@
 
 捐款地址： [https://me.alipay.com/astaxie](https://me.alipay.com/astaxie)
 
-## 撰写方法
-### 文件命名
-每个章节建立一个md文件，如第11章的第3节，则建立**11.3.md**。
-### 代码文件
-代码文件置于src目录之下。每小节代码按目录存放。如第11章的第3节的代码保存于**src/11.3/**目录下。在正文中按需要添加代码。
-
-## 格式规范
-### 正文
-请参看已有章节的规范，要注意的是，每个章节在底部都需要有一个links节，包含“目录”，“上一节”和“下一节”的链接。
-### 代码
-代码要**`go fmt`**后提交。注释文件注明其所属章节。
-
-## 如何编译
-`build.go`依赖markdown的一个解析包，所以第一步先
-
-	go get github.com/russross/blackfriday
-
-这样读者就可以把相应的Markdown文件编译成html文件，执行`go build build.go`，执行生成的文件，就会在底目录下生成相应的html文件
 
 ## 交流
 欢迎大家加入QQ群：259316004 《Go Web编程》专用交流群
@@ -53,7 +35,7 @@
 除特别声明外，本书中的内容使用[CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)（创作共用 署名-相同方式共享3.0许可协议）授权，代码遵循[BSD 3-Clause License](<https://github.com/astaxie/build-web-application-with-golang/blob/master/LICENSE.md>)（3项条款的BSD许可协议）。
 
 ## 开始阅读
-[开始阅读](<https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md>)
+[开始阅读](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/preface.md>)
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/44c98c9d398b8319b6e87edcd3e34144 "githalytics.com")](http://githalytics.com/astaxie/build-web-application-with-golang)
