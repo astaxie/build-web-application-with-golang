@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/russross/blackfriday"
+	"github.com/fairlyblank/md2min"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -11,7 +11,7 @@ import (
 )
 
 // 定义一个访问者结构体
-type Visitor struct{}
+type Visitor struct {}
 
 func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 	if f == nil {
@@ -30,21 +30,18 @@ func (self *Visitor) visit(path string, f os.FileInfo, err error) error {
 			}
 			input, _ := ioutil.ReadAll(file)
 			input = regexp.MustCompile("\\[(.*?)\\]\\(<?(.*?)\\.md>?\\)").ReplaceAll(input, []byte("[$1](<$2.html>)"))
-			output := blackfriday.MarkdownCommon(input)
 			var out *os.File
 			if out, err = os.Create(strings.Replace(f.Name(), ".md", ".html", -1)); err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating %s: %v", f.Name(), err)
 				os.Exit(-1)
 			}
 			defer out.Close()
-			header := "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\"/>\n</head>\n"
-			footer := "</html>\n"
-			out.Write([]byte(header))
-			if _, err = out.Write(output); err != nil {
-				fmt.Fprintln(os.Stderr, "Error writing output:", err)
+			md := md2min.New("none")
+			err = md.Parse(input, out)
+			if err != nil {
+				fmt.Fprintln(os.Stderr, "Parsing Error", err)
 				os.Exit(-1)
 			}
-			out.Write([]byte(footer))
 		}
 	}
 	return nil
