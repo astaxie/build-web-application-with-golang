@@ -6,6 +6,8 @@
 - [京东](http://book.jd.com/11224644.html)
 - [Amazon](http://www.amazon.cn/Go-Web%E7%BC%96%E7%A8%8B-%E8%B0%A2%E5%AD%9F%E5%86%9B/dp/B00CHWVAHQ/ref=sr_1_1?s=books&ie=UTF8&qid=1369323453&sr=1-1)
 
+![](ebook/images/ebook.jpg)
+
 # 通过捐款支持本书
 如果你喜欢这本《Go Web编程》的话， 可以通过捐款的方式， 支持作者继续更新本书或者做出其他更多好玩好用的开源应用： 比如为本书修补漏洞、添加更多有趣的章节， 或者发行有更多更棒内容的下一版，或者改善beego等等。
 
