@@ -1,13 +1,12 @@
 # 《Go Web 编程》
-因为自己对Web开发比较感兴趣，所以最近抽空在写一本开源的书籍《Go Web编程》《Build Web Application with Golang》。写这本书不表示我能力很强，而是我愿意分享，和大家一起分享Go写Web应用的一些东西。
+目前这本书已经出版，如果你觉得内容还可以，你可以通过下面几个途径购买，谢谢支持：
 
-- 对于从PHP/Python/Ruby转过来的同学了解Go怎么写Web应用开发的
+- [chinapub](http://product.china-pub.com/3767290)
+- [当当网](http://product.dangdang.com/product.aspx?product_id=23231404)
+- [京东](http://book.jd.com/11224644.html)
+- [Amazon](http://www.amazon.cn/Go-Web%E7%BC%96%E7%A8%8B-%E8%B0%A2%E5%AD%9F%E5%86%9B/dp/B00CHWVAHQ/ref=sr_1_1?s=books&ie=UTF8&qid=1369323453&sr=1-1)
 
-- 对于从C/C++转过来的同学了解Web到底是怎么运行起来的
-
-我一直认为知识是用来分享的，让更多的人分享自己拥有的一切知识这个才是人生最大的快乐。
-
-这本书目前我放在Github上，我现在基本每天晚上抽空会写一些，时间有限、能力有限，所以希望更多的朋友参与到这个开源项目中来。
+![](ebook/images/ebook.jpg)
 
 # 通过捐款支持本书
 如果你喜欢这本《Go Web编程》的话， 可以通过捐款的方式， 支持作者继续更新本书或者做出其他更多好玩好用的开源应用： 比如为本书修补漏洞、添加更多有趣的章节， 或者发行有更多更棒内容的下一版，或者改善beego等等。
