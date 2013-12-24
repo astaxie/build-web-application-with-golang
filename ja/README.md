@@ -1,13 +1,10 @@
 # "Go Web プログラミング"
-どちらかというとWeb開発に興味がある方なので、最近時間を見つけてはオープンソース書籍 "Go Webプログラミング"（Build Web Application with Golang）を書いています。この本を書いて誰かに自分の脳力の高さを示そうとかそういうのではなくて、ただGoで書くWebアプリケーションについて皆さんと共有したいと思っています。
+現在この本はすでに出版されています。もし悪くない内容だと思ったら以下より購入することができます。ご協力に感謝いたします：
 
-- GoによるWebアプリケーション開発はPHP/Python/Rubyユーザから見てどう理解すべきか
-
-- Webが一体どのように実行されているかをC/C++ユーザが理解するには
-
-知識は共有するものだと私は思います。より多くの人に自分の持てる一切の知識を共有することこそ、人生の最大の楽しみなのです。
-
-私は今のところGithub上にあるこの本を、基本的に毎晩時間を見ては少しずつ書き足しています。時間は限られていて、能力も限られています。だからどうか多くの仲間にこのプロジェクトに参加して欲しい。
+- [chinapub](http://product.china-pub.com/3767290)
+- [当当网](http://product.dangdang.com/product.aspx?product_id=23231404)
+- [京东](http://book.jd.com/11224644.html)
+- [Amazon](http://www.amazon.cn/Go-Web%E7%BC%96%E7%A8%8B-%E8%B0%A2%E5%AD%9F%E5%86%9B/dp/B00CHWVAHQ/ref=sr_1_1?s=books&ie=UTF8&qid=1369323453&sr=1-1)
 
 # カンパでサポートする
 もし"Go Webプログラミング"を気に入っていただけたのなら、寄付を通じて作者にこの本の続きを更新させるか、もっと面白くてためになるオープンソースアプリケーションの開発をご検討下さい：例えばこの本にパッチをあてたり、もっと面白い章を追加したり、もっともっと凄い内容の次回作を出してみたり、beegoを改修してくれたり、です。
@@ -39,4 +36,3 @@
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/44c98c9d398b8319b6e87edcd3e34144 "githalytics.com")](http://githalytics.com/astaxie/build-web-application-with-golang)
-
