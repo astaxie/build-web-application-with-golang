@@ -17,7 +17,7 @@
 ## 交流
 欢迎大家加入QQ群：259316004 《Go Web编程》专用交流群
 
-论坛交流：http://bbs.gocn.im
+论坛交流：[http://bbs.mygolang.com](http://bbs.mygolang.com)
 
 ## 致谢
 首先要感谢Golang-China的QQ群102319854，里面的每一个人都很热心，同时要特别感谢几个人
