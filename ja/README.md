@@ -15,7 +15,7 @@
 ## 連絡方法
 ぜひQQ群にどうぞ：259316004 《Go Web编程》专用交流群
 
-掲示板：http://bbs.gocn.im
+掲示板：[http://bbs.mygolang.com](http://bbs.mygolang.com)
 
 ## 謝辞
 まずGolang-ChinaのQQ群102319854に感謝を申し上げます。彼らはみんな非常に熱心で、特に数名の方には本当に感謝しています。
