@@ -1,5 +1,11 @@
 #!/bin/sh
 
+SED='sed'
+
+if [ `uname -s` == 'Darwin' ] ; then
+  SED='gsed'
+fi
+
 bn="`basename $0`"
 WORKDIR="$(cd $(dirname $0); pwd -P)"
 
@@ -43,7 +49,7 @@ __METADATA__
 
 mkdir -p $TMP/images
 cp -r $WORKDIR/images/* $TMP/images/
-ls [0-9]*.html | xargs sed -i "s/png?raw=true/png/g"
+ls [0-9]*.html | xargs $SED -i "s/png?raw=true/png/g"
 
 pandoc --reference-links -S --toc -f html -t epub --epub-metadata=metadata.txt --epub-cover-image="$WORKDIR/../images/cover.png" -o "$WORKDIR/../build-web-application-with-golang.epub" `ls [0-9]*.html | sort`
 
