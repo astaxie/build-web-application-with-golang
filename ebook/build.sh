@@ -28,7 +28,7 @@ go get -u github.com/fairlyblank/md2min
 WORKDIR="$WORKDIR" TMP="$TMP" go run "$WORKDIR/build.go"
 )
 
-if [ ! type -P pandoc >/dev/null 2>&1 ]; then
+if ! type -P pandoc >/dev/null 2>&1; then
 	echo "$MSG_INSTALL_PANDOC_FIRST"
 	exit 0
 fi
@@ -42,7 +42,7 @@ cat <<__METADATA__ > metadata.txt
 __METADATA__
 
 
-[ type -P gsed >/dev/null 2>&1 ] && SED='gsed' || SED='sed'
+type -P gsed >/dev/null 2>&1 && SED='gsed' || SED='sed'
 
 mkdir -p $TMP/images
 cp -r $WORKDIR/images/* $TMP/images/
