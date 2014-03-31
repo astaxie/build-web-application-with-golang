@@ -1,11 +1,5 @@
 #!/bin/sh
 
-SED='sed'
-
-if [ `uname -s` == 'Darwin' ] ; then
-  SED='gsed'
-fi
-
 bn="`basename $0`"
 WORKDIR="$(cd $(dirname $0); pwd -P)"
 
@@ -34,7 +28,7 @@ go get -u github.com/fairlyblank/md2min
 WORKDIR="$WORKDIR" TMP="$TMP" go run "$WORKDIR/build.go"
 )
 
-if [ ! type -P pandoc >/dev/null 2>&1 ]; then
+if ! type -P pandoc >/dev/null 2>&1; then
 	echo "$MSG_INSTALL_PANDOC_FIRST"
 	exit 0
 fi
@@ -47,9 +41,12 @@ cat <<__METADATA__ > metadata.txt
 <dc:title>$MSG_TITLE</dc:title>
 __METADATA__
 
+
+type -P gsed >/dev/null 2>&1 && SED='gsed' || SED='sed'
+
 mkdir -p $TMP/images
 cp -r $WORKDIR/images/* $TMP/images/
-ls [0-9]*.html | xargs $SED -i "s/png?raw=true/png/g"
+ls [0-9]*.html | xargs $SED -i "" "s/png?raw=true/png/g"
 
 pandoc --reference-links -S --toc -f html -t epub --epub-metadata=metadata.txt --epub-cover-image="$WORKDIR/images/cover.png" -o "$WORKDIR/../build-web-application-with-golang.epub" `ls [0-9]*.html | sort`
 
