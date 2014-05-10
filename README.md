@@ -1,4 +1,12 @@
 # 《Go Web 编程》
+这本书目前有多个版本:
+
+[中文开始阅读](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/preface.md>)
+
+[日文开始阅读](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ja/ebook/preface.md>)
+
+[English Version](<https://github.com/astaxie/build-web-application-with-golang/blob/master/en/eBook/preface.md>)
+
 目前这本书已经出版，如果你觉得内容还可以，你可以通过下面几个途径购买，谢谢支持：
 
 - [chinapub](http://product.china-pub.com/3767290)
