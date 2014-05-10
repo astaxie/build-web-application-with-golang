@@ -1,0 +1,6 @@
+MSG_INSTALL_PANDOC_FIRST='pandocをインストール後、再度実行してください。'
+MSG_SUCCESSFULLY_GENERATED='build-web-application-with-golang.epub を作成しました'
+MSG_CREATOR='Astaxie'
+MSG_DESCRIPTION='オープンソースのGo Webプログラミング書籍'
+MSG_LANGUAGE='ja-JP'
+MSG_TITLE='Go Webプログラミング'
