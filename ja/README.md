@@ -34,7 +34,7 @@
 特に明示されている場合を除き、この本の内容は[CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)（クリエイティブ・コモンズ 表示-継承3.0非移植）が適用されます。コードは[BSD 3-Clause License](<https://github.com/astaxie/build-web-application-with-golang/blob/master/LICENSE.md>)（三条項BSDライセンス）となります。
 
 ## 読み始める
-[読み始める](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/preface.md>)
+[読み始める](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ja/ebook/preface.md>)
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/44c98c9d398b8319b6e87edcd3e34144 "githalytics.com")](http://githalytics.com/astaxie/build-web-application-with-golang)
