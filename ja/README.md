@@ -13,6 +13,7 @@
 
 寄付はこちら： [https://me.alipay.com/astaxie](https://me.alipay.com/astaxie)
 
+English Donate:[donate](http://beego.me/donate)
 
 ## 連絡方法
 ぜひQQ群にどうぞ：259316004 《Go Web编程》专用交流群
