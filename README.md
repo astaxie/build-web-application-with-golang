@@ -11,7 +11,7 @@
 # 通过捐款支持本书
 如果你喜欢这本《Go Web编程》的话， 可以通过捐款的方式， 支持作者继续更新本书或者做出其他更多好玩好用的开源应用： 比如为本书修补漏洞、添加更多有趣的章节， 或者发行有更多更棒内容的下一版，或者改善beego等等。
 
-捐款地址： [https://me.alipay.com/astaxie](https://me.alipay.com/astaxie)
+支付宝扫描捐款: ![](images/alipay.png)
 
 English Donate:[donate](http://beego.me/donate)
 
