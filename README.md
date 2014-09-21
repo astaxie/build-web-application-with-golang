@@ -29,7 +29,7 @@ English Donate:[donate](http://beego.me/donate)
 论坛交流：[http://bbs.go-china.org/](http://bbs.go-china.org/)
 
 ## 致谢
-首先要感谢Golang-China的QQ群102319854，里面的每一个人都很热心，同时要特别感谢几个人
+首先要感谢Golang-China的QQ群102319854(已满)，请加2群(384414723),里面的每一个人都很热心，同时要特别感谢几个人
 
  - [四月份平民](https://plus.google.com/110445767383269817959) (review代码)
  - [Hong Ruiqi](https://github.com/hongruiqi) (review代码)
