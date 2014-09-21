@@ -1,4 +1,3 @@
-<<<<<<< ours
 # "Go Web プログラミング"
 この本には現在いくつかのバージョンがあります:
 
@@ -30,7 +29,7 @@ English Donate:[donate](http://beego.me/donate)
 掲示板：[http://bbs.go-china.org/](http://bbs.go-china.org/)
 
 ## 謝辞
-まずGolang-ChinaのQQ群102319854に感謝を申し上げます。彼らはみんな非常に熱心で、特に数名の方には本当に感謝しています。
+まずGolang-ChinaのQQ群102319854(すでに満員です)に感謝を申し上げます。2群(384414723)を追加してください。彼らはみんな非常に熱心で、特に数名の方には本当に感謝しています。
 
  - [四月份平民](https://plus.google.com/110445767383269817959) (コードレビュー)
  - [Hong Ruiqi](https://github.com/hongruiqi) (コードレビュー)
