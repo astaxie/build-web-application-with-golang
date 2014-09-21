@@ -1,4 +1,13 @@
+<<<<<<< ours
 # "Go Web プログラミング"
+この本には現在いくつかのバージョンがあります:
+
+[中国語で読み始める](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/preface.md>)
+
+[日本語で読み始める](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ja/ebook/preface.md>)
+
+[English Version](<https://github.com/astaxie/build-web-application-with-golang/blob/master/en/eBook/preface.md>)
+
 現在この本はすでに出版されています。もし悪くない内容だと思ったら以下より購入することができます。ご協力に感謝いたします：
 
 - [chinapub](http://product.china-pub.com/3767290)
