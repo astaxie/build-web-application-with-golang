@@ -1,4 +1,12 @@
 # "Go Web プログラミング"
+この本には現在いくつかのバージョンがあります:
+
+[中国語で読み始める](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/preface.md>)
+
+[日本語で読み始める](<https://github.com/astaxie/build-web-application-with-golang/blob/master/ja/ebook/preface.md>)
+
+[English Version](<https://github.com/astaxie/build-web-application-with-golang/blob/master/en/eBook/preface.md>)
+
 現在この本はすでに出版されています。もし悪くない内容だと思ったら以下より購入することができます。ご協力に感謝いたします：
 
 - [chinapub](http://product.china-pub.com/3767290)
@@ -11,16 +19,17 @@
 # カンパでサポートする
 もし"Go Webプログラミング"を気に入っていただけたのなら、寄付を通じて作者にこの本の続きを更新させるか、もっと面白くてためになるオープンソースアプリケーションの開発をご検討下さい：例えばこの本にパッチをあてたり、もっと面白い章を追加したり、もっともっと凄い内容の次回作を出してみたり、beegoを改修してくれたり、です。
 
-寄付はこちら： [https://me.alipay.com/astaxie](https://me.alipay.com/astaxie)
+支付宝扫描捐款: ![](ebook/images/alipay.png)
 
+English Donate:[donate](http://beego.me/donate)
 
 ## 連絡方法
 ぜひQQ群にどうぞ：259316004 《Go Web编程》专用交流群
 
-掲示板：[http://bbs.mygolang.com](http://bbs.mygolang.com)
+掲示板：[http://bbs.go-china.org/](http://bbs.go-china.org/)
 
 ## 謝辞
-まずGolang-ChinaのQQ群102319854に感謝を申し上げます。彼らはみんな非常に熱心で、特に数名の方には本当に感謝しています。
+まずGolang-ChinaのQQ群102319854(すでに満員です)に感謝を申し上げます。2群(384414723)を追加してください。彼らはみんな非常に熱心で、特に数名の方には本当に感謝しています。
 
  - [四月份平民](https://plus.google.com/110445767383269817959) (コードレビュー)
  - [Hong Ruiqi](https://github.com/hongruiqi) (コードレビュー)
