@@ -13,6 +13,7 @@
 
 捐款地址： [https://me.alipay.com/astaxie](https://me.alipay.com/astaxie)
 
+English Donate:[donate](http://beego.me/donate)
 
 ## 交流
 欢迎大家加入QQ群：259316004 《Go Web编程》专用交流群
