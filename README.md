@@ -14,7 +14,7 @@ QQ群：386056972
 
 BBS：[http://golanghome.com/](http://golanghome.com/)
 
-## Thanks
+## Acknowledgments
 
  - [四月份平民](https://plus.google.com/110445767383269817959) (review代码)
  - [Hong Ruiqi](https://github.com/hongruiqi) (review代码)
