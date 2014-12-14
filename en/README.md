@@ -16,7 +16,7 @@ I believe the purpose of studying is sharing with others. The happiest thing in 
 
 # Donate
 
-AliPay: <img src="zh/images/alipay.png" alt="alipay" width="100" height="100">
+AliPay: <img src="../zh/images/alipay.png" alt="alipay" width="100" height="100">
 
 English Donate:[donate](http://beego.me/donate)
 
