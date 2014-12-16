@@ -24,7 +24,7 @@
 English Donate:[donate](http://beego.me/donate)
 
 ## 連絡方法
-ぜひQQ群にどうぞ：259316004 《Go Web编程》专用交流群
+ぜひQQ群にどうぞ：386056972 《Go Web编程》专用交流群
 
 掲示板：[http://bbs.go-china.org/](http://bbs.go-china.org/)
 
