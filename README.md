@@ -5,7 +5,7 @@
 
 # Donate
 
-AliPay: <img src="zh/images/alipay.png" alt="alipay" style="width:100px;height:100px">
+AliPay: <img src="zh/images/alipay.png" alt="alipay" width="100" height="100">
 
 English Donate:[donate](http://beego.me/donate)
 
