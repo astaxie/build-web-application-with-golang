@@ -1,0 +1,39 @@
+{
+  "output": null,
+  "generator": "site",
+  "title": "Build Web Application with golang",
+  "description": "Build Web Application with golang",
+  "extension": null,
+  "plugins": [],
+  "pluginsConfig": {
+    "fontSettings": {
+    "theme": "sepia", "night" or "white",
+    "family": "serif" or "sans",
+    "size": 1 to 4
+    }
+  },
+  "pdf": {
+    "toc": true,
+    "pageNumbers": true,
+    "fontSize": 18,
+    "paperSize": "a4",
+    "margin": {
+      "right": 36,
+      "left": 36,
+      "top": 36,
+      "bottom": 36
+    }
+  }
+  "links": {
+    "home": "https://github.com/astaxie/build-web-application-with-golang",
+    "about": "https://github.com/astaxie/build-web-application-with-golang",
+    "issues": "https://github.com/astaxie/build-web-application-with-golang/issues",
+    "edit": null,
+    "sharing": {
+      "google": null,
+      "facebook": null,
+      "twitter": null,
+      "weibo": null
+    }
+  }
+}
