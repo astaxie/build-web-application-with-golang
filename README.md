@@ -1,5 +1,6 @@
 # Mulit Language Version
 * [English](en/)
+* [Spanish](es/)
 * [中文](zh/)
 * [日本語](ja/)
 
