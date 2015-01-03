@@ -1,4 +1,3 @@
-* [preface](preface.md)
 * [Go Environment Configuration](01.0.md)
 	* [Installation](01.1.md)
 	* [$GOPATH and workspace](01.2.md)
@@ -94,4 +93,5 @@
 	* [Multi-language support](14.5.md)
 	* [pprof](14.6.md)
 	* [Summary](14.7.md)
-* Appendix A [References](ref.md)
+* [References](ref.md)
+* [preface](preface.md)
