@@ -1,0 +1,7 @@
+- 1.[Configuration de votre environnement de développement Go](01.0.md)
+	- 1.1. [Installation](01.1.md)
+	- 1.2. [$GOPATH et workspace](01.2.md)
+	- 1.3. [Commandes Go](01.3.md)
+	- 1.4. [Outils de développement Go](01.4.md)
+	- 1.5. [Résumé](01.5.md)
+- Appendice A [Références](ref.md)
