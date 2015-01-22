@@ -4,6 +4,7 @@
 * [Spanish](es/)
 * [中文](zh/)
 * [日本語](ja/)
+* [Turkish](tr/)
 
 # Donate
 
