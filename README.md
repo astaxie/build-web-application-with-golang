@@ -1,4 +1,4 @@
-# Multi Language Version
+# Multiple Language Versions
 * [English](en/)
 * [Spanish](es/)
 * [中文](zh/)
