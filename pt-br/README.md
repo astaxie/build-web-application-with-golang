@@ -1,14 +1,15 @@
-***Build Web Application with Golang***
+***Construindo Aplicações Web em Golang***
 ======================================
 
-### Purpose
+### Sobre
 
-Because I'm interested in web application development, I used my free time to write this book as an open source version. It doesn't mean that I have a very good ability to build web applications; I would like to share what I've done with Go in building web applications.
+Por ser interessado em desenvolver aplicações para Web, utilizei meu tempo livre para escrever este livro em código aberto. Isso não significa que tenho uma ótima habilidade em desenvolver aplicações Web, apenas queria compartilhar o que fiz desenvolvendo aplicações Web em Go.
 
-- For those of you who are working with PHP/Python/Ruby, you will learn how to build a web application with Go.
-- For those of you who are working with C/C++, you will know how the web works.
+Este livro é destinado para:
+- Quem costuma trabalhar com PHP/Python/Ruby e deseja aprender a criar aplicações Web em Go.
+- Quem costuma trabalhar com C/C++ e deseja aprender como a Web funciona.
 
-I believe the purpose of studying is sharing with others. The happiest thing in my life is sharing everything I've known with more people.
+Eu acredito que o propósito é compartilhar aprendizado com outras pessoas. Estou feliz por compartilhar tudo que aprendi e ensinar.
 
 # Donate
 
