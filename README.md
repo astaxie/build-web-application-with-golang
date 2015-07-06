@@ -5,6 +5,7 @@
 * [中文](zh/)
 * [日本語](ja/)
 * [Turkish](tr/)
+* [Português - Brasil](pt-br/)
 
 # Donate
 
