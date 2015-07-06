@@ -11,18 +11,18 @@ Este livro é destinado para:
 
 Eu acredito que o propósito é compartilhar aprendizado com outras pessoas. Estou feliz por compartilhar tudo que aprendi e ensinar.
 
-# Donate
+# Doações
 
 AliPay: <img src="../zh/images/alipay.png" alt="alipay" width="100" height="100">
 
 English Donate:[donate](http://beego.me/donate)
 
-## Community
+## Comunidade
 QQ群：386056972
 
 BBS：[http://golanghome.com/](http://golanghome.com/)
 
-### Acknowledgments
+### Reconhecimento
 
  - [四月份平民 April Citizen](https://plus.google.com/110445767383269817959) (review code)
  - [洪瑞琦 Hong Ruiqi](https://github.com/hongruiqi) (review code)
