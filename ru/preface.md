@@ -4,7 +4,7 @@
 	- 1.3. [Утилиты Go](01.3.md)
 	- 1.4. [Инструменты разработки для Go](01.4.md)
 	- 1.5. [Итоги раздела](01.5.md)
-- 2.[Go basic knowledge](02.0.md)
+- 2.[Основы Go](02.0.md)
 	- 2.1. ["Hello, Go"](02.1.md)
 	- 2.2. [Go foundation](02.2.md)
 	- 2.3. [Control statements and functions](02.3.md)
