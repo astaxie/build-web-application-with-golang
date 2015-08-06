@@ -1,6 +1,6 @@
-# Appendix A References
+# Anhang A Literaturverzeichnis
 
-This book is a summary of my Go experience, some content are from other gophers' either blog or sites. Thanks them!
+Dieses Buch ist eine Zusammenfassung meiner Erfahrungen in Go. Einige Inhalte stammen aus den Blogs und Internetseiten von anderen Gophern. Vielen Dank an euch.
 
 1. [golang blog](http://blog.golang.org)
 2. [Russ Cox blog](http://research.swtch.com/)
