@@ -6,6 +6,7 @@
 * [日本語](ja/)
 * [Turkish](tr/)
 * [Português - Brasil](pt-br/)
+* [German](de/)
 
 # Donate
 
