@@ -1,37 +1,37 @@
-# Symfony2 Cookbook(版本 2.7.0 LTS)
+# Go Web 编程
 
-Symfony2 是一个基于 MVC 模式的面向对象的 PHP5 框架，有着开发速度快、性能高等特点。Symfony 的目的是加速 Web 应用的创建与维护。它的特点如下：
-
- - 缓存管理
- - 自定义 URLs
- - 搭建了一些基础模块
- - 多语言与 I18N 支持
- - 采用对象模型与 MVC 分离
- - Ajax 支持
- - 适用于企业应用开发
-
-《Symfony2 Cookbook》 用具体的示例和代码将 Symfony2 的基本概念和常见问题进行了非常详尽的解释和说明，使开发者可以快速上手使用 Symfony2 解决各种问题。
+《Go Web编程》介绍如何用 Go 语言进行 Web 应用的开发，将 Go 语言的特性与 Web 开发实战组合到一起，帮读者成功地构建跨平台的应用程序，节省 Go 语言开发 Web 的宝贵时间。有了这些针对真实问题的解决方案放在手边，大多数编程难题都会迎刃而解。
  
-Symfony 2.7.0 LTS（长期支持版本）正式版于 2015 年 5 月 31 日正式发布，增加了 100 多条新特性和加强特性。本课程是对官方文档 Symfony2 Cookbook 的中文译本，基于最新的 Symfony 2.7.0 LTS 版本。
+在《Go Web 编程》中，读者可以更加方便地找到各种编程问题的解决方案，内容涵盖文本处理、表单处理、 Session 管理、数据库交互、加/解密、国际化和标准化，以及程序的部署维护等运维方面的知识，最后还介绍了一个快速开发的框架帮助您迅速进入 Go 语言的 Web 开发。
 
-官方文档地址：[http://symfony.com/doc/current/cookbook/index.html](http://symfony.com/doc/current/cookbook/index.html)
+本书由 [astaxie](https://github.com/astaxie) 授权托管。
 
+# 适用人群
 
-## 适用人群  
+本课程适用人群是对 Go 语言感兴趣特别是希望对 Go 语言在 Web 开发中的应用有深入了解的开发人员。
 
-本教程主要适用于希望通过具体的示例和代码来快速上手使用 Symfony2 进行 Web 开发并解决各种问题的开发者。
+# 捐赠
 
-## 学习前提   
+AliPay: <img src="images/alipay.png" alt="alipay" width="100" height="100">
 
-在学习本课程之前，我们假设你对 PHP 的基本语法和语言特点有所了解，能使用 PHP 编写程序。
+## 社区
 
-## 版本信息
+QQ群：386056972
 
-书中演示代码基于以下版本：
+BBS：[http://golanghome.com/](http://golanghome.com/)
 
-|语言/框架   |版本信息
-|----------|--------------------
-|Symfony | 2.7.0 LTS
+## 鸣谢
 
->版权声明：   
->本译文版权属于极客学院。转载及商业合作请联系 wiki@jikexueyuan.com
+ - [四月份平民](https://plus.google.com/110445767383269817959) (review代码)
+ - [Hong Ruiqi](https://github.com/hongruiqi) (review代码)
+ - [BianJiang](https://github.com/border) (编写go开发工具Vim和Emacs的设置)
+ - [Oling Cat](https://github.com/OlingCat)(review代码)
+ - [Wenlei Wu](mailto:spadesacn@gmail.com)(提供一些图片展示)
+ - [polaris](https://github.com/polaris1119)(review书)
+ - [雨痕](https://github.com/qyuhen)(review第二章)
+
+## 版权
+
+Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)
+
+Code License: [BSD 3-Clause License](<https://github.com/astaxie/build-web-application-with-golang/blob/master/LICENSE.md>)
