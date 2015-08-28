@@ -1,9 +1,9 @@
 # Appendix A References
 
-This book is a summary of my Go experience, some content are from other gophers' either blog or sites. Thanks them!
+This book is a summary of my Go experience, some content are from other Gophers' either blogs or sites. Thanks to them!
 
 1. [golang blog](http://blog.golang.org)
-2. [Russ Cox blog](http://research.swtch.com/)
+2. [Russ Cox's blog](http://research.swtch.com/)
 3. [go book](http://go-book.appsp0t.com/)
 4. [golangtutorials](http://golangtutorials.blogspot.com)
 5. [轩脉刃de刀光剑影](http://www.cnblogs.com/yjf512/)
