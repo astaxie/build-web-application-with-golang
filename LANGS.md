@@ -4,3 +4,4 @@
 * [日本語](ja/)
 * [Português - Brasil](pt-br/)
 * [German](de/)
+* [한국어](ko/)
