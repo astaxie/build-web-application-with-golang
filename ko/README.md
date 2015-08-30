@@ -1,27 +1,29 @@
-***Build Web Application with Golang***
+***Go언어로 웹 애플리케이션 만들기***
 ======================================
 
-### Purpose
+### 들어가는말
 
-Because I'm interested in web application development, I used my free time to write this book as an open source version. It doesn't mean that I have a very good ability to build web applications; I would like to share what I've done with Go in building web applications.
+필자는 웹 개발에 관심이 많기 때문에 여유시간에 오픈소스로 이 책을 작성하였습니다.
+이것이 제가 웹 애플리케이션 개발에 아주 뛰어나다는 의미는 아니고
+단지 Go언어로 웹 애플리케이션 개발을 한 경험을 공유하기 위함입니다.
 
-- For those of you who are working with PHP/Python/Ruby, you will learn how to build a web application with Go.
-- For those of you who are working with C/C++, you will know how the web works.
+- PHP/Python/Ruby 개발에 경험이 있는 사람은 Go로 웹 애플리케이션을 개발하는 방법을 익힐 수 있습니다.
+- C/C++ 개발에 경험이 있는 사람은 웹이 어떻게 돌어가게 되는지 알게 될 것입니다.
 
-I believe the purpose of studying is sharing with others. The happiest thing in my life is sharing everything I've known with more people.
+필자는 공부의 목적은 공유에 있다고 믿고 있습니다. 제 삶에 가장 행복한 일은 다른사람과 제 지식을 공유하는 것입니다.
 
-# Donate
+# 기부
 
 AliPay: <img src="../zh/images/alipay.png" alt="alipay" width="100" height="100">
 
 English Donate:[donate](http://beego.me/donate)
 
-## Community
+## 커뮤니티
 QQ群：386056972
 
 BBS：[http://golanghome.com/](http://golanghome.com/)
 
-### Acknowledgments
+### 감사의 말
 
  - [四月份平民 April Citizen](https://plus.google.com/110445767383269817959) (review code)
  - [洪瑞琦 Hong Ruiqi](https://github.com/hongruiqi) (review code)
