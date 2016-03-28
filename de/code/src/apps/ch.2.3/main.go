@@ -37,7 +37,7 @@ func show_if_var() {
 		fmt.Println("x is less than 10")
 	}
 
-	// the following code will not compile, since `x` is only accessable with the if/else block
+	// the following code will not compile, since `x` is only accessible with the if/else block
 	// fmt.Println(x)
 }
 func show_goto() {
