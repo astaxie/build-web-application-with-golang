@@ -7,6 +7,7 @@
 * [Turkish](tr/)
 * [Português - Brasil](pt-br/)
 * [German](de/)
+* [Русский](ru/)
 
 # Donate
 
