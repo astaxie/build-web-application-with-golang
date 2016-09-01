@@ -30,6 +30,8 @@ BBS：[http://golanghome.com/](http://golanghome.com/)
  - [polaris](https://github.com/polaris1119)(review书)
  - [雨痕](https://github.com/qyuhen)(review第二章)
 
+Translator:
+ - [LarryBattle](https://github.com/LarryBattle)
 ## License
 Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)
 
