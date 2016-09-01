@@ -12,3 +12,4 @@
 8. [setup-the-rails-application-for-internationalization](http://guides.rubyonrails.org/i18n.html#setup-the-rails-application-for-internationalization)
 9. [The Cross-Site Scripting (XSS) FAQ](http://www.cgisecurity.com/xss-faq.html)
 10. [Network programming with Go](http://jan.newmarch.name/go)
+11. [RESTFul](http://www.ruanyifeng.com/blog/2011/09/restful.html)
