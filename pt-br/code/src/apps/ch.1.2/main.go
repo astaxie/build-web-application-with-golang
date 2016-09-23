@@ -1,7 +1,7 @@
-// Example code for Chapter 1.2 from "Build Web Application with Golang"
-// Purpose: Run this file to check if your workspace is setup correctly.
-// To run, navigate to the current directory in a console and type `go run main.go`
-// If the text "Hello World" isn't shown, then setup your workspace again.
+// Código de exemplo para o Capítulo 1.2 do "Build Web Application with Golang"
+// Propósito: Execute este arquivo para verificar se o seu workspace está corretamente configurado.
+// Para executar, navegue até o diretório onde ele estiver salvo e digite no console `go run main.go`
+// Se o texto "Hello World" não aparecer, então configure seu ambiente novamente.
 package main
 
 import (
