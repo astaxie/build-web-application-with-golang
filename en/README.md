@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< 2b65ffe75a66a23ea074aa13de82d219774d01bf
-# Go Web 编程
-Go web编程是因为我喜欢Web编程,所以写了这本书,希望大家喜欢
-=======
-=======
->>>>>>> eead24cf064976b648de5826eab51880c803b0fa
 ***Build Web Application with Golang***
 ======================================
 
@@ -42,14 +35,7 @@ BBS：[http://golanghome.com/](http://golanghome.com/)
 
 This book is licensed under the [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/),
 the code is licensed under a [BSD 3-Clause License](<https://github.com/astaxie/build-web-application-with-golang/blob/master/LICENSE.md>), unless otherwise specified.
-<<<<<<< HEAD
-<<<<<<< de3c5bdaa45425ed37306a45067d55eba7dcedc2
 
 ### Get Started
 
 [Index](./eBook/preface.md)
->>>>>>> add english version
-=======
->>>>>>> update the readme
-=======
->>>>>>> eead24cf064976b648de5826eab51880c803b0fa
