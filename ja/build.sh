@@ -1,1 +1,1 @@
-../zh/build.sh
+../../ebook/build.sh

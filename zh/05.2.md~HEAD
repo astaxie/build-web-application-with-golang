@@ -1,0 +1,137 @@
+# 5.2 使用MySQL数据库
+目前Internet上流行的网站构架方式是LAMP，其中的M即MySQL, 作为数据库，MySQL以免费、开源、使用方便为优势成为了很多Web开发的后端数据库存储引擎。
+
+## MySQL驱动
+Go中支持MySQL的驱动目前比较多，有如下几种，有些是支持database/sql标准，而有些是采用了自己的实现接口,常用的有如下几种:
+
+- https://github.com/go-sql-driver/mysql  支持database/sql，全部采用go写。
+- https://github.com/ziutek/mymysql   支持database/sql，也支持自定义的接口，全部采用go写。
+- https://github.com/Philio/GoMySQL 不支持database/sql，自定义接口，全部采用go写。
+
+接下来的例子我主要以第一个驱动为例(我目前项目中也是采用它来驱动)，也推荐大家采用它，主要理由：
+
+- 这个驱动比较新，维护的比较好
+- 完全支持database/sql接口
+- 支持keepalive，保持长连接,虽然[星星](http://www.mikespook.com)fork的mymysql也支持keepalive，但不是线程安全的，这个从底层就支持了keepalive。
+
+## 示例代码
+接下来的几个小节里面我们都将采用同一个数据库表结构：数据库test，用户表userinfo，关联用户信息表userdetail。
+
+	CREATE TABLE `userinfo` (
+		`uid` INT(10) NOT NULL AUTO_INCREMENT,
+		`username` VARCHAR(64) NULL DEFAULT NULL,
+		`departname` VARCHAR(64) NULL DEFAULT NULL,
+		`created` DATE NULL DEFAULT NULL,
+		PRIMARY KEY (`uid`)
+	)
+
+	CREATE TABLE `userdetail` (
+		`uid` INT(10) NOT NULL DEFAULT '0',
+		`intro` TEXT NULL,
+		`profile` TEXT NULL,
+		PRIMARY KEY (`uid`)
+	)
+
+如下示例将示范如何使用database/sql接口对数据库表进行增删改查操作
+
+	package main
+
+	import (
+		_ "github.com/go-sql-driver/mysql"
+		"database/sql"
+		"fmt"
+		//"time"
+	)
+
+	func main() {
+		db, err := sql.Open("mysql", "astaxie:astaxie@/test?charset=utf8")
+		checkErr(err)
+
+		//插入数据
+		stmt, err := db.Prepare("INSERT userinfo SET username=?,departname=?,created=?")
+		checkErr(err)
+
+		res, err := stmt.Exec("astaxie", "研发部门", "2012-12-09")
+		checkErr(err)
+
+		id, err := res.LastInsertId()
+		checkErr(err)
+
+		fmt.Println(id)
+		//更新数据
+		stmt, err = db.Prepare("update userinfo set username=? where uid=?")
+		checkErr(err)
+
+		res, err = stmt.Exec("astaxieupdate", id)
+		checkErr(err)
+
+		affect, err := res.RowsAffected()
+		checkErr(err)
+
+		fmt.Println(affect)
+
+		//查询数据
+		rows, err := db.Query("SELECT * FROM userinfo")
+		checkErr(err)
+
+		for rows.Next() {
+			var uid int
+			var username string
+			var department string
+			var created string
+			err = rows.Scan(&uid, &username, &department, &created)
+			checkErr(err)
+			fmt.Println(uid)
+			fmt.Println(username)
+			fmt.Println(department)
+			fmt.Println(created)
+		}
+
+		//删除数据
+		stmt, err = db.Prepare("delete from userinfo where uid=?")
+		checkErr(err)
+
+		res, err = stmt.Exec(id)
+		checkErr(err)
+
+		affect, err = res.RowsAffected()
+		checkErr(err)
+
+		fmt.Println(affect)
+
+		db.Close()
+
+	}
+
+	func checkErr(err error) {
+		if err != nil {
+			panic(err)
+		}
+	}
+
+
+通过上面的代码我们可以看出，Go操作Mysql数据库是很方便的。
+
+关键的几个函数我解释一下：
+
+sql.Open()函数用来打开一个注册过的数据库驱动，go-sql-driver中注册了mysql这个数据库驱动，第二个参数是DSN(Data Source Name)，它是go-sql-driver定义的一些数据库链接和配置信息。它支持如下格式：
+
+	user@unix(/path/to/socket)/dbname?charset=utf8
+	user:password@tcp(localhost:5555)/dbname?charset=utf8
+	user:password@/dbname
+	user:password@tcp([de:ad:be:ef::ca:fe]:80)/dbname
+
+db.Prepare()函数用来返回准备要执行的sql操作，然后返回准备完毕的执行状态。
+
+db.Query()函数用来直接执行Sql返回Rows结果。
+
+stmt.Exec()函数用来执行stmt准备好的SQL语句
+
+我们可以看到我们传入的参数都是=?对应的数据，这样做的方式可以一定程度上防止SQL注入。
+
+
+
+## links
+   * [目录](<preface.md>)
+   * 上一节: [database/sql接口](<05.1.md>)
+   * 下一节: [使用SQLite数据库](<05.3.md>)

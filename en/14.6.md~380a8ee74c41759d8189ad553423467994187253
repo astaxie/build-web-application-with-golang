@@ -1,0 +1,105 @@
+# 14.6 pprof支持
+Go语言有一个非常棒的设计就是标准库里面带有代码的性能监控工具，在两个地方有包：
+
+	net/http/pprof
+	
+	runtime/pprof
+
+其实net/http/pprof中只是使用runtime/pprof包来进行封装了一下，并在http端口上暴露出来
+
+## beego支持pprof
+目前beego框架新增了pprof，该特性默认是不开启的，如果你需要测试性能，查看相应的执行goroutine之类的信息，其实Go的默认包"net/http/pprof"已经具有该功能，如果按照Go默认的方式执行Web，默认就可以使用，但是由于beego重新封装了ServHTTP函数，默认的包是无法开启该功能的，所以需要对beego的内部改造支持pprof。
+
+- 首先在beego.Run函数中根据变量是否自动加载性能包
+
+		if PprofOn {
+			BeeApp.RegisterController(`/debug/pprof`, &ProfController{})
+			BeeApp.RegisterController(`/debug/pprof/:pp([\w]+)`, &ProfController{})
+		}
+	
+- 设计ProfConterller
+
+		package beego
+
+		import (
+			"net/http/pprof"
+		)
+		
+		type ProfController struct {
+			Controller
+		}
+		
+		func (this *ProfController) Get() {
+			switch this.Ctx.Params[":pp"] {
+			default:
+				pprof.Index(this.Ctx.ResponseWriter, this.Ctx.Request)
+			case "":
+				pprof.Index(this.Ctx.ResponseWriter, this.Ctx.Request)
+			case "cmdline":
+				pprof.Cmdline(this.Ctx.ResponseWriter, this.Ctx.Request)
+			case "profile":
+				pprof.Profile(this.Ctx.ResponseWriter, this.Ctx.Request)
+			case "symbol":
+				pprof.Symbol(this.Ctx.ResponseWriter, this.Ctx.Request)
+			}
+			this.Ctx.ResponseWriter.WriteHeader(200)
+		}
+	
+
+## 使用入门
+
+通过上面的设计，你可以通过如下代码开启pprof：
+
+	beego.PprofOn = true
+
+然后你就可以在浏览器中打开如下URL就看到如下界面：
+![](images/14.6.pprof.png?raw=true)
+
+图14.7 系统当前goroutine、heap、thread信息
+
+点击goroutine我们可以看到很多详细的信息：
+
+![](images/14.6.pprof2.png?raw=true)
+
+图14.8 显示当前goroutine的详细信息
+
+我们还可以通过命令行获取更多详细的信息
+
+	go tool pprof http://localhost:8080/debug/pprof/profile
+	
+这时候程序就会进入30秒的profile收集时间，在这段时间内拼命刷新浏览器上的页面，尽量让cpu占用性能产生数据。
+
+	(pprof) top10
+
+	Total: 3 samples
+
+       1 33.3% 33.3% 1 33.3% MHeap_AllocLocked
+
+       1 33.3% 66.7% 1 33.3% os/exec.(*Cmd).closeDescriptors
+
+       1 33.3% 100.0% 1 33.3% runtime.sigprocmask
+
+       0 0.0% 100.0% 1 33.3% MCentral_Grow
+
+       0 0.0% 100.0% 2 66.7% main.Compile
+
+       0 0.0% 100.0% 2 66.7% main.compile
+
+       0 0.0% 100.0% 2 66.7% main.run
+
+       0 0.0% 100.0% 1 33.3% makeslice1
+
+       0 0.0% 100.0% 2 66.7% net/http.(*ServeMux).ServeHTTP
+
+       0 0.0% 100.0% 2 66.7% net/http.(*conn).serve	
+
+	(pprof)web
+	
+![](images/14.6.pprof3.png?raw=true)
+
+图14.9 展示的执行流程信息
+
+## links
+   * [目录](<preface.md>)
+   * 上一节: [多语言支持](<14.5.md>)
+   * 下一节: [小结](<14.7.md>)

@@ -1,0 +1,113 @@
+# 14.5 多语言支持
+我们在第十章介绍过国际化和本地化，开发了一个go-i18n库，这小节我们将把该库集成到beego框架里面来，使得我们的框架支持国际化和本地化。
+
+## i18n集成
+beego中设置全局变量如下：
+
+	Translation	i18n.IL  
+	Lang 		string  //设置语言包，zh、en
+	LangPath	string  //设置语言包所在位置
+
+初始化多语言函数:
+
+	func InitLang(){
+		beego.Translation:=i18n.NewLocale()
+		beego.Translation.LoadPath(beego.LangPath)
+		beego.Translation.SetLocale(beego.Lang)
+	}
+
+为了方便在模板中直接调用多语言包，我们设计了三个函数来处理响应的多语言：
+
+	beegoTplFuncMap["Trans"] = i18n.I18nT
+	beegoTplFuncMap["TransDate"] = i18n.I18nTimeDate
+	beegoTplFuncMap["TransMoney"] = i18n.I18nMoney
+	
+	func I18nT(args ...interface{}) string {
+	    ok := false
+	    var s string
+	    if len(args) == 1 {
+	        s, ok = args[0].(string)
+	    }
+	    if !ok {
+	        s = fmt.Sprint(args...)
+	    }
+	    return beego.Translation.Translate(s)
+	}
+	
+	func I18nTimeDate(args ...interface{}) string {
+	    ok := false
+	    var s string
+	    if len(args) == 1 {
+	        s, ok = args[0].(string)
+	    }
+	    if !ok {
+	        s = fmt.Sprint(args...)
+	    }
+	    return beego.Translation.Time(s)
+	}	
+	
+	func I18nMoney(args ...interface{}) string {
+	    ok := false
+	    var s string
+	    if len(args) == 1 {
+	        s, ok = args[0].(string)
+	    }
+	    if !ok {
+	        s = fmt.Sprint(args...)
+	    }
+	    return beego.Translation.Money(s)
+	}
+
+## 多语言开发使用
+1. 设置语言以及语言包所在位置，然后初始化i18n对象：
+	
+		beego.Lang = "zh"
+		beego.LangPath = "views/lang"
+		beego.InitLang()
+
+2. 设计多语言包
+
+	上面讲了如何初始化多语言包，现在设计多语言包，多语言包是json文件，如第十章介绍的一样，我们需要把设计的文件放在LangPath下面，例如zh.json或者en.json
+	
+		# zh.json
+	
+		{
+		"zh": {
+		    "submit": "提交",
+		    "create": "创建"
+		    }
+		}
+		
+		#en.json
+		
+		{
+		"en": {
+		    "submit": "Submit",
+		    "create": "Create"
+		    }
+		}
+
+3. 使用语言包
+
+	我们可以在controller中调用翻译获取响应的翻译语言，如下所示：
+	
+		func (this *MainController) Get() {
+			this.Data["create"] = beego.Translation.Translate("create")
+			this.TplNames = "index.tpl"
+		}
+				
+	我们也可以在模板中直接调用响应的翻译函数：
+	
+		//直接文本翻译
+		{{.create | Trans}}
+		
+		//时间翻译
+		{{.time | TransDate}}	
+		
+		//货币翻译
+		{{.money | TransMoney}}	
+		
+## links
+   * [目录](<preface.md>)
+   * 上一节: [用户认证](<14.4.md>)
+   * 下一节: [pprof支持](<14.6.md>)

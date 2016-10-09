@@ -1,7 +1,7 @@
-// Example code for Chapter ? from "Build Web Application with Golang"
-// Purpose: Hello world example demonstrating UTF-8 support.
-// To run in the console, type `go run main.go`
-// You're missing language fonts, if you're seeing squares or question marks.
+// Código de exemplo para o Capítulo 2.1 do "Build Web Application with Golang"
+// Propósito: Exemplo de Hello world demonstrando suporte para UTF-8.
+// Para executar, navegue até o diretório onde ele estiver salvo e digite no console `go run main.go`
+// Se você receber quadrados ou pontos de interrogação, possivelemente você não tenha as fontes instaladas.
 package main
 
 import "fmt"

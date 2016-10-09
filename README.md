@@ -1,4 +1,8 @@
 # Multiple Language Versions
+<<<<<<< HEAD
+=======
+* [English](en/)
+>>>>>>> eead24cf064976b648de5826eab51880c803b0fa
 * [French](fr/)
 * [Spanish](es/)
 * [中文](zh/)
@@ -29,6 +33,11 @@ BBS：[http://golanghome.com/](http://golanghome.com/)
  - [polaris](https://github.com/polaris1119)(review书)
  - [雨痕](https://github.com/qyuhen)(review第二章)
 
+<<<<<<< HEAD
+=======
+Translator:
+ - [LarryBattle](https://github.com/LarryBattle)
+>>>>>>> eead24cf064976b648de5826eab51880c803b0fa
 ## License
 Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)
 

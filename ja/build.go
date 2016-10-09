@@ -1,1 +1,1 @@
-../zh/build.go
+../../ebook/build.go
