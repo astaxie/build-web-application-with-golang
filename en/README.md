@@ -38,4 +38,4 @@ the code is licensed under a [BSD 3-Clause License](<https://github.com/astaxie/
 
 ### Get Started
 
-[Index](./eBook/preface.md)
+[Index](./preface.md)
