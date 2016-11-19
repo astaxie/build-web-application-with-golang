@@ -2,3 +2,7 @@
 pkg/*
 *.html
 *.exe
+_book
+*.epub
+*.pdf
+.DS_Store
