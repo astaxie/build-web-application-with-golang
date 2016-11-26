@@ -6,7 +6,7 @@
 	- 1.5. [Sumário](01.5.md)
 - 2.[Go, conhecimento básico](02.0.md)
 	- 2.1. ["Olá, Go"](02.1.md)
-	- 2.2. [Go foundation](02.2.md)
+	- 2.2. [Fundamentos em Go](02.2.md)
 	- 2.3. [Control statements and functions](02.3.md)
 	- 2.4. [struct](02.4.md)
 	- 2.5. [Orientação a Objetos](02.5.md)
