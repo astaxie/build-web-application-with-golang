@@ -1,5 +1,5 @@
-// Example code for Chapter 2.2 from "Build Web Application with Golang"
-// Purpose: Goes over the assignment and manipulation of basic data types.
+// Código de exemplo para o Capítulo 2.2 do "Build Web Application with Golang"
+// Propósito: Revisar os conceitos de atribuição e manipulação de tipos de dados básicos.
 package main
 
 import (
@@ -7,14 +7,14 @@ import (
 	"fmt"
 )
 
-// constants
+// constantes
 const Pi = 3.1415926
 
-// booleans default to `false`
-var isActive bool                   // global variable
-var enabled, disabled = true, false // omit type of variables
+// booleanos: padrão `false`
+var isActive bool                   // variável global
+var enabled, disabled = true, false // omite o tipo das variáveis
 
-// grouped definitions
+// definições agrupadas
 const (
 	i         = 1e4
 	MaxThread = 10
@@ -22,24 +22,24 @@ const (
 )
 
 var (
-	frenchHello string      // basic form to define string
-	emptyString string = "" // define a string with empty string
+	frenchHello string      // forma básica para definir strings
+	emptyString string = "" // define uma string vazia
 )
 
 func show_multiple_assignments() {
 	fmt.Println("show_multiple_assignments()")
 	var v1 int = 42
 
-	// Define three variables with type "int", and initialize their values.
-	// vname1 is v1, vname2 is v2, vname3 is v3
+	// Define três variáveis com o tipo "int" e inicializa seus valores.
+	// vname1 é v1, vname2 é v2, vname3 é v3
 	var v2, v3 int = 2, 3
 
-	// `:=` only works in functions
-	// `:=` is the short way of declaring variables without
-	//  specifying the type and using the keyboard `var`.
+	// `:=` funciona somente em funções
+	// `:=` é a maneira curta de declarar variáveis sem
+	//  especificar o tipo e usando a palvra-chave `var`.
 	vname1, vname2, vname3 := v1, v2, v3
 
-	// `_` disregards the returned value.
+	// `_` desconsidera o valor retornado.
 	_, b := 34, 35
 
 	fmt.Printf("vname1 = %v, vname2 = %v, vname3 = %v\n", vname1, vname2, vname3)
@@ -48,9 +48,9 @@ func show_multiple_assignments() {
 }
 func show_bool() {
 	fmt.Println("show_bool()")
-	var available bool // local variable
-	valid := false     // Shorthand assignment
-	available = true   // assign value to variable
+	var available bool // variável local
+	valid := false     // declara a variável e infere o tipo booleano (declaração curta)
+	available = true   // atribui um valor a variável
 
 	fmt.Printf("valid = %v, !valid = %v\n", valid, !valid)
 	fmt.Printf("available = %v\n", available)
@@ -78,14 +78,14 @@ func show_different_types() {
 }
 func show_strings() {
 	fmt.Println("show_strings()")
-	no, yes, maybe := "no", "yes", "maybe" // brief statement
+	no, yes, maybe := "no", "yes", "maybe" // declaração curta
 	japaneseHello := "Ohaiyou"
-	frenchHello = "Bonjour" // basic form of assign values
+	frenchHello = "Bonjour" // forma básica de atribuir valores
 
 	fmt.Println("Random strings")
 	fmt.Println(frenchHello, japaneseHello, no, yes, maybe)
 
-	// The backtick, `, will not escape any character in a string
+	// A crase, `, não deixa escapar qualquer caractere da string
 	fmt.Println(`This 
 	is on
 	multiple lines`)
@@ -94,18 +94,18 @@ func show_string_manipulation() {
 	fmt.Println("show_string_manipulation()")
 	var s string = "hello"
 
-	//You can't do this with strings
+	//Você não pode fazer isso com strings
 	//s[0] = 'c'
 
 	s = "hello"
-	c := []byte(s) // convert string to []byte type
+	c := []byte(s) // converte string para o tipo []byte
 	c[0] = 'c'
-	s2 := string(c) // convert back to string type
+	s2 := string(c) // converte novamente para o tipo string
 
 	m := " world"
 	a := s + m
 
-	d := "c" + s[1:] // you cannot change string values by index, but you can get values instead.
+	d := "c" + s[1:] // você não pode alterar valores de string pelo índice, mas você pode obter os valores desta maneira
 	fmt.Printf("%s\n", d)
 
 	fmt.Printf("s = %s, c = %v\n", s, c)
@@ -125,66 +125,66 @@ func show_iota() {
 		x = iota // x == 0
 		y = iota // y == 1
 		z = iota // z == 2
-		w        // If there is no expression after constants name,
-		// it uses the last expression, so here is saying w = iota implicitly.
-		// Therefore w == 3, and y and x both can omit "= iota" as well.
+		w        // Se não houver nenhuma expressão após o nome da constante,
+		// ela usa a última expressão, ou seja, neste caso w = iota implicitamente.
+		// Portanto w == 3, e tanto y quanto z podem omitir "= iota" também.
 	)
 
-	const v = iota // once iota meets keyword `const`, it resets to `0`, so v = 0.
+	const v = iota // uma vez que iota encontra a palavra-chave `const`, ela é redefinida para `0`, então v = 0.
 
 	const (
-		e, f, g = iota, iota, iota // e=0,f=0,g=0 values of iota are same in one line.
+		e, f, g = iota, iota, iota // e=0,f=0,g=0 valores de iota são iguais quando estão na mesma linha.
 	)
 	fmt.Printf("x = %v, y = %v, z = %v, w = %v\n", x, y, z, w)
 	fmt.Printf("v = %v\n", v)
 	fmt.Printf("e = %v, f = %v, g = %v\n", e, f, g)
 }
 
-// Functions and variables starting with a capital letter are public to other packages.
-// Everything else is private.
+// Funções e variáveis começando com uma letra maiúscula são públicas para outros pacotes.
+// Todo o resto é privado.
 func This_is_public()  {}
 func this_is_private() {}
 
 func set_default_values() {
-	// default values for the types.
+	// valores padrão para os tipos.
 	const (
 		a int     = 0
 		b int8    = 0
 		c int32   = 0
 		d int64   = 0
 		e uint    = 0x0
-		f rune    = 0   // the actual type of rune is int32
-		g byte    = 0x0 // the actual type of byte is uint8
-		h float32 = 0   // length is 4 byte
-		i float64 = 0   //length is 8 byte
+		f rune    = 0   // o tipo real de rune é int32
+		g byte    = 0x0 // o tipo real de byte é uint8
+		h float32 = 0   // comprimento é 4 bytes
+		i float64 = 0   // comprimento é 8 bytes
 		j bool    = false
 		k string  = ""
 	)
 }
 func show_arrays() {
 	fmt.Println("show_arrays()")
-	var arr [10]int // an array of type int
-	arr[0] = 42     // array is 0-based
-	arr[1] = 13     // assign value to element
+	var arr [10]int // um array do tipo int
+	arr[0] = 42     // array é baseado em 0
+	arr[1] = 13     // atribui valor ao elemento
 
-	a := [3]int{1, 2, 3} // define a int array with 3 elements
+	a := [3]int{1, 2, 3} // define um array do tipo int com 3 elementos
 
 	b := [10]int{1, 2, 3}
-	// define a int array with 10 elements,
-	// and first three are assigned, rest of them use default value 0.
+	// define um array do tipo int com 10 elementos,
+	// e os três primeiros são atribuídos, o restante usa o valor padrão 0.
 
-	c := [...]int{4, 5, 6} // use `…` replace with number of length, Go will calculate it for you.
+	c := [...]int{4, 5, 6} // usa `…` para substituir o número do comprimento, Go irá calcular isto para você.
 
-	// define a two-dimensional array with 2 elements, and each element has 4 elements.
+	// define um array bidimensional com 2 elementos, e onde cada elemento possui 4 elementos.
 	doubleArray := [2][4]int{[4]int{1, 2, 3, 4}, [4]int{5, 6, 7, 8}}
 
-	// You can write about declaration in a shorter way.
+	// Você pode escrever a declaração de forma curta.
 	easyArray := [2][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}}
 
 	fmt.Println("arr =", arr)
-	fmt.Printf("The first element is %d\n", arr[0]) // get element value, it returns 42
+	fmt.Printf("The first element is %d\n", arr[0]) // obtém o valor do elemento, retorna 42
 	fmt.Printf("The last element is %d\n", arr[9])
-	//it returns default value of 10th element in this array, which is 0 in this case.
+	// retorna o valor padrão do décimo elemento do array, que neste caso é 0.
 
 	fmt.Println("array a =", a)
 	fmt.Println("array b =", b)
@@ -195,36 +195,36 @@ func show_arrays() {
 }
 func show_slices() {
 	fmt.Println("show_slices()")
-	// define a slice with 10 elements which types are byte
+	// define um slice de tipo byte com 10 elementos
 	var ar = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
 
-	// define two slices with type []byte
+	// define dois slices com o tipo []byte
 	var a, b []byte
 
-	// a points to elements from 3rd to 5th in array ar.
+	// a aponta para os elementos da posição 3 até a 5 do array ar.
 	a = ar[2:5]
-	// now a has elements ar[2]、ar[3] and ar[4]
+	// agora a possui os elementos ar[2], ar[3] e ar[4]
 
-	// b is another slice of array ar
+	// b é outro slice do array ar
 	b = ar[3:5]
-	// now b has elements ar[3] and ar[4]
+	// agora b possui os elementos de ar[3] e ar[4]
 
-	// define an array
+	// define um array
 	var array = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
-	// define two slices
+	// define dois slices
 	var aSlice, bSlice []byte
 
-	// some convenient operations
-	aSlice = array[:3] // equals to aSlice = array[0:3] aSlice has elements a,b,c
-	aSlice = array[5:] // equals to aSlice = array[5:10] aSlice has elements f,g,h,i,j
-	aSlice = array[:]  // equals to aSlice = array[0:10] aSlice has all elements
+	// algumas operações convenientes
+	aSlice = array[:3] // igual a aSlice = array[0:3] aSlice possui os elementos a,b,c
+	aSlice = array[5:] // igual a aSlice = array[5:10] aSlice possui os elementos f,g,h,i,j
+	aSlice = array[:]  // igual a aSlice = array[0:10] aSlice possui todos os elementos
 
-	// slice from slice
-	aSlice = array[3:7]  // aSlice has elements d,e,f,g，len=4，cap=7
-	bSlice = aSlice[1:3] // bSlice contains aSlice[1], aSlice[2], so it has elements e,f
-	bSlice = aSlice[:3]  // bSlice contains aSlice[0], aSlice[1], aSlice[2], so it has d,e,f
-	bSlice = aSlice[0:5] // slcie could be expanded in range of cap, now bSlice contains d,e,f,g,h
-	bSlice = aSlice[:]   // bSlice has same elements as aSlice does, which are d,e,f,g
+	// slice de slice
+	aSlice = array[3:7]  // aSlice possui os elementos d,e,f,g，len=4，cap=7
+	bSlice = aSlice[1:3] // bSlice contém aSlice[1], aSlice[2], ou seja, ele possui os elementos e,f
+	bSlice = aSlice[:3]  // bSlice contém aSlice[0], aSlice[1], aSlice[2], ou seja, ele possui os elementos d,e,f
+	bSlice = aSlice[0:5] // bSlice pode ser expandido de acordo com cap, agora bSlice contém d,e,f,g,h
+	bSlice = aSlice[:]   // bSlice possui os mesmos elementos de aSlice, os quais são d,e,f,g
 
 	fmt.Println("slice ar =", ar)
 	fmt.Println("slice a =", a)
@@ -236,22 +236,22 @@ func show_slices() {
 }
 func show_map() {
 	fmt.Println("show_map()")
-	// use string as key type, int as value type, and you have to use `make` initialize it.
+	// use tipo string para a chave, tipo int para o valor, e você precisa usar `make` para inicializar
 	var numbers map[string]int
-	// another way to define map
+	// outra forma de declarar map
 	numbers = make(map[string]int)
-	numbers["one"] = 1 // assign value by key
+	numbers["one"] = 1 // atribui valor pela chave
 	numbers["ten"] = 10
 	numbers["three"] = 3
 
-	// Initialize a map
+	// Inicializa um map
 	rating := map[string]float32{"C": 5, "Go": 4.5, "Python": 4.5, "C++": 2}
 
 	fmt.Println("map numbers =", numbers)
-	fmt.Println("The third number is: ", numbers["three"]) // get values
-	// It prints: The third number is: 3
+	fmt.Println("The third number is: ", numbers["three"]) // obtém os valores
+	// Isto irá imprimir: The third number is: 3
 
-	// map has two return values. For second value, if the key doesn't exist，ok is false，true otherwise.
+	// map possui dois valores de retorno. Se a chave não existir, o segundo valor, neste caso "ok", será falso (false). Caso contrário será verdadeiro (true).
 	csharpRating, ok := rating["C#"]
 	if ok {
 		fmt.Println("C# is in the map and its rating is ", csharpRating)
@@ -259,7 +259,7 @@ func show_map() {
 		fmt.Println("We have no rating associated with C# in the map")
 	}
 
-	delete(rating, "C") // delete element with key "c"
+	delete(rating, "C") // deleta o elemento com a chave "c"
 	fmt.Printf("map rating = %#v\n", rating)
 }
 func main() {
