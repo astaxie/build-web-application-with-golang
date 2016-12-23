@@ -1,10 +1,10 @@
-// Example code for Chapter 2.3 from "Build Web Application with Golang"
-// Purpose: Shows how to return multiple values from a function
+// Código de exemplo do capítulo 2.3 de "Build Web Application with Golang"
+// Propósito: mostra como retornar múltiplos valores de uma função
 package main
 
 import "fmt"
 
-// return results of A + B and A * B
+// retorna os resultados de A + B e A * B
 func SumAndProduct(A, B int) (int, int) {
 	return A + B, A * B
 }

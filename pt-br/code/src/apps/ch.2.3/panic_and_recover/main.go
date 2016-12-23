@@ -1,5 +1,5 @@
-// Example code for Chapter 2.3 from "Build Web Application with Golang"
-// Purpose: Showing how to use `panic()` and `recover()`
+// Código de exemplo do capítulo 2.3 de "Build Web Application with Golang"
+// Propósito: mostrar como usar `panic()` e `recover()`
 package main
 
 import (
@@ -22,7 +22,7 @@ func throwsPanic(f func()) (b bool) {
 			b = true
 		}
 	}()
-	f() // if f causes panic, it will recover
+	f() // se f causar pânico, isto irá recuperar
 	return
 }
 func main(){
