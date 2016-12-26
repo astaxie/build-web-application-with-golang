@@ -1,5 +1,5 @@
-// Example code for Chapter 2.3 from "Build Web Application with Golang"
-// Purpose: Goes over if, else, switch conditions, loops and defer.
+// Código de exemplo do capítulo 2.3 de "Build Web Application with Golang"
+// Propósito: mostra alguns exemplos de if, else, switch, loops e defer.
 package main
 
 import "fmt"
@@ -30,25 +30,25 @@ func show_if() {
 }
 func show_if_var() {
 	fmt.Println("\n#show_if_var()")
-	// initialize x, then check if x greater than
+	// inicializa x, então verifica se x é maior
 	if x := computedValue(); x > 10 {
 		fmt.Println("x is greater than 10")
 	} else {
 		fmt.Println("x is less than 10")
 	}
 
-	// the following code will not compile, since `x` is only accessible with the if/else block
+	// o seguinte código não irá compilar, porque `x` é acessível apenas pelo bloco if/else
 	// fmt.Println(x)
 }
 func show_goto() {
 	fmt.Println("\n#show_goto()")
-	// The call to the label switches the goroutine it seems.
+	// A chamada para o label altera o fluxo da goroutine.
 	i := 0
-Here: // label ends with ":"
+Here: // label termina com ":"
 	fmt.Println(i)
 	i++
 	if i < 10 {
-		goto Here // jump to label "Here"
+		goto Here // pule para label "Here"
 	}
 }
 func show_for_loop() {
@@ -60,7 +60,7 @@ func show_for_loop() {
 	fmt.Println("part 1, sum is equal to ", sum)
 
 	sum = 1
-	// The compiler will remove the `;` from the line below.
+	// O compilador irá remover o `;` da linha abaixo.
 	// for ; sum < 1000 ; {
 	for sum < 1000 {
 		sum += sum
@@ -69,7 +69,7 @@ func show_for_loop() {
 
 	for index := 10; 0 < index; index-- {
 		if index == 5 {
-			break // or continue
+			break // ou continue
 		}
 		fmt.Println(index)
 	}
