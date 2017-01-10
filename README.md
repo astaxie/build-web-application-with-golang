@@ -21,6 +21,10 @@ QQ群：148647580
 
 BBS：[http://golanghome.com/](http://gocn.io/)
 
+##Contributors
+
+- See [contributors page](https://github.com/astaxie/build-web-application-with-golang/graphs/contributors) for full list of contributors.
+
 ## Acknowledgments
 
  - [四月份平民](https://plus.google.com/110445767383269817959) (review代码)
