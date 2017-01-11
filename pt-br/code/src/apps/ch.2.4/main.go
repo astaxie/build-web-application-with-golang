@@ -1,5 +1,5 @@
-// Example code for Chapter 2.4 from "Build Web Application with Golang"
-// Purpose: Shows different ways of creating a struct
+// Código de exemplo da seção 2.4 de "Build Web Application with Golang"
+// Propósito: Mostrar formas diferentes de criar uma estrutura
 package main
 
 import "fmt"
@@ -11,11 +11,11 @@ func show_basic_struct() {
 		age  int
 	}
 
-	var P person // p is person type
+	var P person // p é do tipo person
 
-	P.name = "Astaxie"                              // assign "Astaxie" to the filed 'name' of p
-	P.age = 25                                      // assign 25 to field 'age' of p
-	fmt.Printf("The person's name is %s\n", P.name) // access field 'name' of p
+	P.name = "Astaxie"                              // atribui "Astaxie" ao campo 'name' de p
+	P.age = 25                                      // atribui 25 ao campo 'age' de p
+	fmt.Printf("The person's name is %s\n", P.name) // acessa o campo 'name' de p
 
 	tom := person{"Tom", 25}
 

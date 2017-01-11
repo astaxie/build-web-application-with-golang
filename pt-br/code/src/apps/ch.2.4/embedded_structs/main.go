@@ -1,5 +1,5 @@
-// Example code for Chapter 2.4 from "Build Web Application with Golang"
-// Purpose: Example of embedded fields
+// Código de exemplo da seção 2.4 de "Build Web Application with Golang"
+// Propósito: Exemplo de campos incorporados
 package main
 
 import "fmt"
@@ -11,28 +11,28 @@ type Human struct {
 }
 
 type Student struct {
-	Human      // anonymous field, it means Student struct includes all fields that Human has.
+	Human      // campo anônimo, significa que a estrutura Student inclui todos os campos que Human possui.
 	speciality string
 }
 
 func main() {
-	// initialize a student
+	// inicializa um estudante
 	mark := Student{Human{"Mark", 25, 120}, "Computer Science"}
 
-	// access fields
+	// acessa os campos
 	fmt.Println("His name is ", mark.name)
 	fmt.Println("His age is ", mark.age)
 	fmt.Println("His weight is ", mark.weight)
 	fmt.Println("His speciality is ", mark.speciality)
-	// modify notes
+	// modifica especialidade
 	mark.speciality = "AI"
 	fmt.Println("Mark changed his speciality")
 	fmt.Println("His speciality is ", mark.speciality)
-	// modify age
+	// modifica idade
 	fmt.Println("Mark become old")
 	mark.age = 46
 	fmt.Println("His age is", mark.age)
-	// modify weight
+	// modifica peso
 	fmt.Println("Mark is not an athlete any more")
 	mark.weight += 60
 	fmt.Println("His weight is", mark.weight)

@@ -1,17 +1,17 @@
-// Example code for Chapter 2.4 from "Build Web Application with Golang"
-// Purpose: Shows you how to pass and use structs.
+// Código de exemplo da seção 2.4 de "Build Web Application with Golang"
+// Propósito: Mostrar como utilizar estruturas em Go.
 package main
 
 import "fmt"
 
-// define a new type
+// define um novo tipo
 type person struct {
 	name string
 	age  int
 }
 
-// compare age of two people, return the older person and differences of age
-// struct is passed by value
+// compara a idade de duas pessoas e retorna dois valores: a pessoa mais velha e a diferença de idade
+// estrutura é passada por valor
 func Older(p1, p2 person) (person, int) {
 	if p1.age > p2.age {
 		return p1, p1.age - p2.age
@@ -22,13 +22,13 @@ func Older(p1, p2 person) (person, int) {
 func main() {
 	var tom person
 
-	// initialization
+	// inicialização
 	tom.name, tom.age = "Tom", 18
 
-	// initialize two values by format "field:value"
+	// inicializa dois valores pelo formato "campo:valor"
 	bob := person{age: 25, name: "Bob"}
 
-	// initialize two values with order
+	// inicializa dois valores em ordem
 	paul := person{"Paul", 43}
 
 	tb_Older, tb_diff := Older(tom, bob)
