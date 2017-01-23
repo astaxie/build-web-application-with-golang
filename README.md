@@ -9,6 +9,7 @@
 * [Português - Brasil](pt-br/preface.md)
 * [German](de/preface.md)
 * [Русский](ru/preface.md)
+* [বাংলা](bn/preface.md)
 
 # Donate
 
@@ -39,5 +40,3 @@ BBS：[http://golanghome.com/](http://gocn.io/)
 Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)
 
 Code License: [BSD 3-Clause License](<https://github.com/astaxie/build-web-application-with-golang/blob/master/LICENSE.md>)
-
-
