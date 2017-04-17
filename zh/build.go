@@ -1,17 +1,14 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"github.com/a8m/mark"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
-	"bufio"
-	// "net/http"
-	// "github.com/fairlyblank/md2min"
-	"github.com/a8m/mark"
-
 )
 
 // 定义一个访问者结构体
@@ -71,35 +68,11 @@ func (self *Visitor) md2html(arg map[string]string) error {
 		opts.Smartypants = true
 		opts.Fractions = true
 		// r1 := []rune(s1)
-		m := mark.New(input, opts)
-		// md := md2min.New("none")
-		// err = md.Parse([]byte(input), out)
-		// client := &http.Client{}
- 
-	    // req, err := http.NewRequest("POST", "https://api.github.com/markdown/raw", strings.NewReader(input))
-	    // if err != nil {
-	        // handle error
-	    // }
-	 
-	    // req.Header.Set("Content-Type", "text/plain")
-	    // req.Header.Set("charset", "utf-8")
-	    // req.Header.Set("User-Agent", "m2shad0w")
-	 // 
-	    // resp, err := client.Do(req)
-	 
-	    // defer resp.Body.Close()
-	 
-	    // body, err := ioutil.ReadAll(resp.Body)
-	    // if err != nil {
-	        // handle error
-	    // }
-
+		m := mark.New(input, opts
 		w := bufio.NewWriter(out)
-	    n4, err := w.WriteString(s + m.Render())
-	    fmt.Printf("wrote %d bytes\n", n4)
-	    // fmt.Printf("wrote %d bytes\n", n4)
-	    //使用 Flush 来确保所有缓存的操作已写入底层写入器。
-	    w.Flush()
+		n4, err := w.WriteString(s + m.Render())
+		fmt.Printf("wrote %d bytes\n", n4)
+		w.Flush()
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "Parsing Error", err)
 			os.Exit(-1)

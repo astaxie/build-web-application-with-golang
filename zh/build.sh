@@ -15,7 +15,7 @@ WORKDIR="$(cd $(dirname $0); pwd -P)"
 #
 MSG_INSTALL_PANDOC_FIRST='请先安装pandoc，然后再次运行'
 MSG_SUCCESSFULLY_GENERATED='build-web-application-with-golang.epub 已经建立'
-MSG_CREATOR='M2shad0w'
+MSG_CREATOR='Astaxie'
 MSG_DESCRIPTION='一本开源的Go Web编程书籍'
 MSG_LANGUAGE='zh-CN'
 MSG_TITLE='Go Web编程'
