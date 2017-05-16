@@ -19,7 +19,7 @@ English Donate:[donate](http://beego.me/donate)
 ## Community
 QQ群：386056972
 
-BBS：[http://golanghome.com/](http://golanghome.com/)
+BBS：[http://gocn.io/](http://gocn.io/)
 
 ### Acknowledgments
 
