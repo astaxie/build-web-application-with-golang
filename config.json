@@ -1,0 +1,9 @@
+{
+    "name": "Go Web 编程",
+    "introduction": "《Go Web 编程》--一本介绍如何使用 Go 语言来构建 Web 的电子书。",
+    "path": {
+        "content": "zh",
+        "toc": "zh/SUMMARY.md",
+        "readme": "zh/README_example.md"
+    }   
+}
