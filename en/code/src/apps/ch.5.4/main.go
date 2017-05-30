@@ -5,8 +5,9 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	_ "github.com/bmizerany/pq"
 	"time"
+
+	_ "github.com/lib/pq"
 )
 
 const (
