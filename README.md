@@ -1,10 +1,15 @@
 # Multiple Language Versions
-* [English](en/)
-* [French](fr/)
-* [Spanish](es/)
-* [中文](zh/)
-* [日本語](ja/)
-* [Turkish](tr/)
+
+* [English](en/preface.md)
+* [French](fr/preface.md)
+* [Spanish](es/preface.md)
+* [中文](zh/preface.md)
+* [日本語](ja/preface.md)
+* [Turkish](tr/preface.md)
+* [Português - Brasil](pt-br/preface.md)
+* [German](de/preface.md)
+* [Русский](ru/preface.md)
+* [বাংলা](bn/preface.md)
 
 # Donate
 
@@ -13,9 +18,13 @@ AliPay: <img src="zh/images/alipay.png" alt="alipay" width="100" height="100">
 English Donate:[donate](http://beego.me/donate)
 
 ## Community
-QQ群：386056972
+QQ群：148647580
 
-BBS：[http://golanghome.com/](http://golanghome.com/)
+BBS：[http://gocn.io/](http://gocn.io/)
+
+## Contributors
+
+- See [contributors page](https://github.com/astaxie/build-web-application-with-golang/graphs/contributors) for full list of contributors.
 
 ## Acknowledgments
 
@@ -31,5 +40,3 @@ BBS：[http://golanghome.com/](http://golanghome.com/)
 Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)
 
 Code License: [BSD 3-Clause License](<https://github.com/astaxie/build-web-application-with-golang/blob/master/LICENSE.md>)
-
-

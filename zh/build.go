@@ -1,14 +1,14 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"github.com/a8m/mark"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
-
-	"github.com/fairlyblank/md2min"
 )
 
 // 定义一个访问者结构体
@@ -17,6 +17,8 @@ type Visitor struct{}
 func (self *Visitor) md2html(arg map[string]string) error {
 	from := arg["from"]
 	to := arg["to"]
+	s := `<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+`
 	err := filepath.Walk(from+"/", func(path string, f os.FileInfo, err error) error {
 		if f == nil {
 			return err
@@ -62,8 +64,15 @@ func (self *Visitor) md2html(arg map[string]string) error {
 			os.Exit(-1)
 		}
 		defer out.Close()
-		md := md2min.New("none")
-		err = md.Parse([]byte(input), out)
+		opts := mark.DefaultOptions()
+		opts.Smartypants = true
+		opts.Fractions = true
+		// r1 := []rune(s1)
+		m := mark.New(input, opts
+		w := bufio.NewWriter(out)
+		n4, err := w.WriteString(s + m.Render())
+		fmt.Printf("wrote %d bytes\n", n4)
+		w.Flush()
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "Parsing Error", err)
 			os.Exit(-1)
