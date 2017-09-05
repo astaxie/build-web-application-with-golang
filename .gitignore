@@ -9,3 +9,5 @@ _book
 .gitignore
 .vscode
 .git
+
+.idea/
