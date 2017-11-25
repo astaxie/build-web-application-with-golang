@@ -1,4 +1,4 @@
-##Setup for `ch.5.2`
+## Setup for `ch.5.2`
 
 - Step 1) Install and run MySql
 - Step 2) Create a user and database according to the constants in `main.go`

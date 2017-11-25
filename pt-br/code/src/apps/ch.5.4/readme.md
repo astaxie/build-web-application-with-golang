@@ -1,4 +1,4 @@
-##Setup for ch.5.4
+## Setup for ch.5.4
 
 - Step 1) Install and run Postgres
 - Step 2) Create a user and database according to the constants in `main.go`
