@@ -1,4 +1,4 @@
-##Setup for `ch.5.6` for MongoDB
+## Setup for `ch.5.6` for MongoDB
 
 - Step 1) Install and run MongoDB
 - Step 2) Launch the MongoDB daemon (mongod) to start the server.
