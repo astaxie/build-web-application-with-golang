@@ -68,7 +68,7 @@ func (self *Visitor) md2html(arg map[string]string) error {
 		opts.Smartypants = true
 		opts.Fractions = true
 		// r1 := []rune(s1)
-		m := mark.New(input, opts
+		m := mark.New(input, opts)
 		w := bufio.NewWriter(out)
 		n4, err := w.WriteString(s + m.Render())
 		fmt.Printf("wrote %d bytes\n", n4)
