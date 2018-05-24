@@ -1,4 +1,4 @@
-##Setup for `ch.5.6` for Redis
+## Setup for `ch.5.6` for Redis
 
 - Step 1) Install and run Redis
 - Step 2) Launch the Redis server matching the DB constants.

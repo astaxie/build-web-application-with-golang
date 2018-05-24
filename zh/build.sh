@@ -23,14 +23,15 @@ MSG_TITLE='Go Web编程'
 
 
 TMP=`mktemp -d 2>/dev/null || mktemp -d -t "${bn}"` || exit 1
-trap 'rm -rf "$TMP"' 0 1 2 3 15
+# TMP=./build
+# trap 'rm -rf "$TMP"' 0 1 2 3 15
 
 
 cd "$TMP"
 
 (
-[ go list github.com/fairlyblank/md2min >/dev/null 2>&1 ] || export GOPATH="$PWD"
-go get -u github.com/fairlyblank/md2min
+[ go list github.com/a8m/mark >/dev/null 2>&1 ] || export GOPATH="$PWD"
+go get -u github.com/a8m/mark
 WORKDIR="$WORKDIR" TMP="$TMP" go run "$WORKDIR/build.go"
 )
 
@@ -51,6 +52,8 @@ mkdir -p $TMP/images
 cp -r $WORKDIR/images/* $TMP/images/
 ls [0-9]*.html | xargs $SED -i "s/png?raw=true/png/g"
 
-pandoc --reference-links -S --toc -f html -t epub --epub-metadata=metadata.txt --epub-cover-image="$WORKDIR/images/cover.png" -o "$WORKDIR/../build-web-application-with-golang.epub" `ls [0-9]*.html | sort`
+echo "工作目录$WORKDIR, 临时目录$TMP"
+
+pandoc --reference-links -S --toc -f html -t epub --epub-metadata=metadata.txt --epub-cover-image="$WORKDIR/images/cover.png" -o "$WORKDIR/build-web-application-with-golang.epub" `ls [0-9]*.html | sort`
 
 echo "$MSG_SUCCESSFULLY_GENERATED"

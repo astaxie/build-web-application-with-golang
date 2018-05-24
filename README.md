@@ -1,15 +1,15 @@
 # Multiple Language Versions
 
+* [Deutsch](de/preface.md)
 * [English](en/preface.md)
-* [French](fr/preface.md)
-* [Spanish](es/preface.md)
-* [中文](zh/preface.md)
-* [日本語](ja/preface.md)
-* [Turkish](tr/preface.md)
+* [Español](es/preface.md)
+* [Français](fr/preface.md)
 * [Português - Brasil](pt-br/preface.md)
-* [German](de/preface.md)
 * [Русский](ru/preface.md)
+* [Türkçe](tr/preface.md)
 * [বাংলা](bn/preface.md)
+* [日本語](ja/preface.md)
+* [中文](zh/preface.md)
 
 # Donate
 
