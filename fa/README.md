@@ -14,16 +14,27 @@
 
 # دونیت
 
+</div>
+
 AliPay: <img src="../zh/images/alipay.png" alt="alipay" width="100" height="100">
 
 English Donate:[donate](http://beego.me/donate)
 
+<div dir="rtl">
+
 ## جامعه
+
+</div>
+
 QQ群：386056972
 
 BBS：[http://gocn.io/](http://gocn.io/)
 
+<div dir="rtl">
+
 ### تقدیر و تشکر
+
+</div>
 
  - [四月份平民 April Citizen](https://plus.google.com/110445767383269817959) (review code)
  - [洪瑞琦 Hong Ruiqi](https://github.com/hongruiqi) (review code)
@@ -32,6 +43,8 @@ BBS：[http://gocn.io/](http://gocn.io/)
  - [吴文磊 Wenlei Wu](mailto:spadesacn@gmail.com)(provide some pictures)
  - [北极星 Polaris](https://github.com/polaris1119)(review whole book)
  - [雨  痕 Rain Trail](https://github.com/qyuhen)(review chapter 2 and 3)
+
+<div dir="rtl">
 
 ### مجوز
 
