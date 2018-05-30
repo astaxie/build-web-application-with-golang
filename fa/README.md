@@ -38,4 +38,4 @@ BBS：[http://gocn.io/](http://gocn.io/)
 
 ### شروع کنید
 
-[Index](./fa/preface.md)
+[Index](./preface.md)
