@@ -1,4 +1,4 @@
-<div dir="rtl">
+<span dir="rtl">
 ***ساخت وب اپلیکیشن با استفاده از Golang***
 ======================================
 
@@ -40,4 +40,4 @@ BBS：[http://gocn.io/](http://gocn.io/)
 ### شروع کنید
 
 [Index](./preface.md)
-</div>
+</span>
