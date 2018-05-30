@@ -40,5 +40,5 @@ BBS：[http://gocn.io/](http://gocn.io/)
 
 ### شروع کنید
 
-[Index](./preface.md)
+[فهرست مطالب](./preface.md)
 </div>
