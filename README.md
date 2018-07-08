@@ -10,6 +10,7 @@
 * [বাংলা](bn/preface.md)
 * [日本語](ja/preface.md)
 * [中文](zh/preface.md)
+* [پارسی](fa/preface.md)
 
 # Donate
 
