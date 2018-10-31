@@ -31,7 +31,7 @@
 	- 5.2. [MySQL](05.2.md)
 	- 5.3. [SQLite](05.3.md)
 	- 5.4. [PostgreSQL](05.4.md)
-	- 5.5. [Develop ORM based on beedb](05.5.md)
+	- 5.5. [Разработка ORM на основе beedb](05.5.md)
 	- 5.6. [NoSQL database](05.6.md)
 	- 5.7. [Summary](05.7.md)
 - 6.[Data storage and session](06.0.md)
