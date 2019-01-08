@@ -11,6 +11,7 @@
 * [日本語](ja/preface.md)
 * [中文](zh/preface.md)
 * [پارسی](fa/preface.md)
+* [ภาษาไทย] (fa/preface.md)
 
 # Donate
 
