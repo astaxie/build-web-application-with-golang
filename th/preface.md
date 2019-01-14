@@ -1,7 +1,7 @@
 - 1.[การตั้งค่าสภาพแวดล้อมของ Go](01.0.md)
 	- 1.1. [การติดตั้ง](01.1.md)
 	- 1.2. [$GOPATH และ workspace](01.2.md)
-	- 1.3. [Go commands](01.3.md)
+	- 1.3. [คำสั่งต่างๆ ของ Go](01.3.md)
 	- 1.4. [Go development tools](01.4.md)
 	- 1.5. [Summary](01.5.md)
 - 2.[Go basic knowledge](02.0.md)
