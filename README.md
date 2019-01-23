@@ -1,5 +1,6 @@
 # Multiple Language Versions
 
+* [(HTML - PDF) on GitBook](https://legacy.gitbook.com/book/astaxie/build-web-application-with-golang)
 * [Deutsch](de/preface.md)
 * [English](en/preface.md)
 * [Español](es/preface.md)
