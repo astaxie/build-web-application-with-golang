@@ -27,6 +27,7 @@ This book is licensed under the [CC BY-SA 3.0 License](http://creativecommons.or
 
 ## 正體中文翻譯
 
-* [Will 保哥](https://www.facebook.com/will.fans)
-  * [Blog](https://blog.miniasp.com/)
-  * [Twitter](https://twitter.com/Will_Huang)
+* **Will 保哥**
+  * [Blog (The Will Will Web)](https://blog.miniasp.com/)
+  * [Twitter (Will Huang)](https://twitter.com/Will_Huang)
+  * [Facebook (Will 保哥的技術交流中心)](https://www.facebook.com/will.fans/)
