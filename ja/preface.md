@@ -32,7 +32,7 @@
 	* 5.3 [SQLite](05.3.md)
 	* 5.4 [PostgreSQL](05.4.md)
 	* 5.5 [ORMライブラリ beedb](05.5.md)
-	* 5.6 [NOSQLデータベース](05.6.md)
+	* 5.6 [NoSQLデータベース](05.6.md)
 	* 5.7 [まとめ](05.7.md)
 * 6.[データストレージとsession](06.0.md)
 	* 6.1 [sessionとcookie](06.1.md)
