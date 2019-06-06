@@ -10,3 +10,6 @@ _book
 .vscode
 .git
 /fa/working
+
+# Folders
+.idea/
