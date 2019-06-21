@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// 开发者 github token
+// 开发者 GitHub token
 const token = ""
 
 // 定义一个访问者结构体
