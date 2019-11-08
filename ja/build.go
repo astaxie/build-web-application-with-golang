@@ -11,6 +11,13 @@ import (
 	"github.com/fairlyblank/md2min"
 )
 
+var reg1 = regexp.MustCompile(`\[(.*?)\]\(<?(.*?)\.md>?\)`)
+var reg2 = regexp.MustCompile(`https:\/\/github\.com\/astaxie\/build-web-application-with-golang\/blob\/master\/`)
+var re_header = regexp.MustCompile(`(?m)^#.+$`)
+var re_sub = regexp.MustCompile(`^(#+)\s*(.+)$`)
+var re_footer1 = regexp.MustCompile(`(?m)^#{2,} links.*?\n(.+\n)*`)
+var re_footer2 = regexp.MustCompile(`png\?raw=true`)
+
 // 定义一个访问者结构体
 type Visitor struct{}
 
@@ -38,18 +45,10 @@ func (self *Visitor) md2html(arg map[string]string) error {
 
 		input_byte, _ := ioutil.ReadAll(file)
 		input := string(input_byte)
-		reg, err := regexp.Compile(`\[(.*?)\]\(<?(.*?)\.md>?\)`)
-		if err != nil {
-			fmt.Printf(os.Stderr, "Regex failed to compile %v \n", err)
-		}
-		input = reg.ReplaceAllString(input, "[$1](<$2.html>)")
+		input = reg1.ReplaceAllString(input, "[$1](<$2.html>)")
 
 		if f.Name() == "README.md" {
-			reg, err = regexp.Compile(`https:\/\/github\.com\/astaxie\/build-web-application-with-golang\/blob\/master\/`)
-			if err != nil {
-				fmt.Fprintf(os.Stderr, "Regex failed to compile %v \n", err)
-			}
-			input = reg.ReplaceAllString(input, "")
+			input = reg2.ReplaceAllString(input, "")
 		}
 
 		// 以#开头的行，在#后增加空格
@@ -83,8 +82,6 @@ func (self *Visitor) md2html(arg map[string]string) error {
 }
 
 func FixHeader(input string) string {
-	re_header := regexp.MustCompile(`(?m)^#.+$`)
-	re_sub := regexp.MustCompile(`^(#+)\s*(.+)$`)
 	fixer := func(header string) string {
 		s := re_sub.FindStringSubmatch(header)
 		return s[1] + " " + s[2]
@@ -93,13 +90,11 @@ func FixHeader(input string) string {
 }
 
 func RemoveFooterLink(input string) string {
-	re_footer := regexp.MustCompile(`(?m)^#{2,} links.*?\n(.+\n)*`)
-	return re_footer.ReplaceAllString(input, "")
+	return re_footer1.ReplaceAllString(input, "")
 }
 
 func RemoveImageLinkSuffix(input string) string {
-	re_footer := regexp.MustCompile(`png\?raw=true`)
-	return re_footer.ReplaceAllString(input, "png")
+	return re_footer2.ReplaceAllString(input, "png")
 }
 
 func main() {
