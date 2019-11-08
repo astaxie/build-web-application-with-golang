@@ -38,10 +38,18 @@ func (self *Visitor) md2html(arg map[string]string) error {
 
 		input_byte, _ := ioutil.ReadAll(file)
 		input := string(input_byte)
-		input = regexp.MustCompile(`\[(.*?)\]\(<?(.*?)\.md>?\)`).ReplaceAllString(input, "[$1](<$2.html>)")
+		reg, err := regexp.Compile(`\[(.*?)\]\(<?(.*?)\.md>?\)`)
+		if err != nil {
+			fmt.Printf(os.Stderr, "Regex failed to compile %v \n", err)
+		}
+		input = reg.ReplaceAllString(input, "[$1](<$2.html>)")
 
 		if f.Name() == "README.md" {
-			input = regexp.MustCompile(`https:\/\/github\.com\/astaxie\/build-web-application-with-golang\/blob\/master\/`).ReplaceAllString(input, "")
+			reg, err = regexp.Compile(`https:\/\/github\.com\/astaxie\/build-web-application-with-golang\/blob\/master\/`)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Regex failed to compile %v \n", err)
+			}
+			input = reg.ReplaceAllString(input, "")
 		}
 
 		// 以#开头的行，在#后增加空格

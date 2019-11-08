@@ -40,10 +40,18 @@ func (self *Visitor) md2html(arg map[string]string) error {
 
 		input_byte, _ := ioutil.ReadAll(file)
 		input := string(input_byte)
-		input = regexp.MustCompile(`\[(.*?)\]\(<?(.*?)\.md>?\)`).ReplaceAllString(input, "[$1](<$2.html>)")
+		reg, err := regexp.Compile(`\[(.*?)\]\(<?(.*?)\.md>?\)`)
+		if err != nil {
+			fmt.Printf(os.Stderr, "Regex failed to compile %v \n", err)
+		}
+		input = reg.ReplaceAllString(input, "[$1](<$2.html>)")
 
 		if f.Name() == "README.md" {
-			input = regexp.MustCompile(`https:\/\/github\.com\/astaxie\/build-web-application-with-golang\/blob\/master\/`).ReplaceAllString(input, "")
+			reg, err = regexp.Compile(`https:\/\/github\.com\/astaxie\/build-web-application-with-golang\/blob\/master\/`)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Regex failed to compile %v \n", err)
+			}
+			input = reg.ReplaceAllString(input, "")
 		}
 
 		// 以#开头的行，在#后增加空格
@@ -84,8 +92,14 @@ func (self *Visitor) md2html(arg map[string]string) error {
 }
 
 func FixHeader(input string) string {
-	re_header := regexp.MustCompile(`(?m)^#.+$`)
-	re_sub := regexp.MustCompile(`^(#+)\s*(.+)$`)
+	re_header, err := regexp.Compile(`(?m)^#.+$`)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Regex failed to compile %v \n", err)
+	}
+	re_sub, err := regexp.Compile(`^(#+)\s*(.+)$`)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Regex failed to compile %v \n", err)
+	}
 	fixer := func(header string) string {
 		s := re_sub.FindStringSubmatch(header)
 		return s[1] + " " + s[2]
@@ -94,12 +108,18 @@ func FixHeader(input string) string {
 }
 
 func RemoveFooterLink(input string) string {
-	re_footer := regexp.MustCompile(`(?m)^#{2,} links.*?\n(.+\n)*`)
+	re_footer, err := regexp.Compile(`(?m)^#{2,} links.*?\n(.+\n)*`)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Regex failed to compile %v \n", err)
+	}
 	return re_footer.ReplaceAllString(input, "")
 }
 
 func RemoveImageLinkSuffix(input string) string {
-	re_footer := regexp.MustCompile(`png\?raw=true`)
+	re_footer, err := regexp.Compile(`png\?raw=true`)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Regex failed to compile", err)
+	}
 	return re_footer.ReplaceAllString(input, "png")
 }
 
