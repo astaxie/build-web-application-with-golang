@@ -40,7 +40,7 @@ func (self *Visitor) md2html(arg map[string]string) error {
 		if err != nil {
 			return err
 		}
-		defer file.Close
+		defer file.Close()
 
 		input_byte, _ := ioutil.ReadAll(file)
 		input := string(input_byte)
