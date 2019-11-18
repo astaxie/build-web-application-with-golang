@@ -23,6 +23,7 @@ func postFile(filename string, targetUrl string) {
 
 	fh, err := os.Open(filename)
 	checkError(err)
+	defer fh.Close()
 
 	_, err = io.Copy(fileWriter, fh)
 	checkError(err)
