@@ -79,6 +79,9 @@ func (self *Visitor) md2html(arg map[string]string) error {
 		req.Header.Set("Authorization", "token "+token)
 		//
 		resp, err := client.Do(req)
+		if err!=nil {
+			fmt.Println("err:",err)
+		}
 
 		defer resp.Body.Close()
 

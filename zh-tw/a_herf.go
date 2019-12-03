@@ -43,6 +43,9 @@ func  htmlfile(filename string,next_path string,last_path string)(error){
        var add_string2 string = "\n<a href=\"./"+last_path+"\">下一页</a>\n"
        file.Seek(1,2)
        _,err=file.WriteString(add_string1)
+       if(err!=nil){
+           fmt.Println("err:",err)
+       }
        _,err=file.WriteString(add_string2)
        file.Seek(0,0)
        if(err!=nil){
