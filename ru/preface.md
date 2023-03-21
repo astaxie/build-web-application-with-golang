@@ -40,7 +40,7 @@
 	- 6.3. [Session storage](06.3.md)
 	- 6.4. [Prevent hijack of session](06.4.md)
 	- 6.5. [Итоги раздела](06.5.md)
-- 7.[Text files](07.0.md)
+- 7.[Текстовые файлы](07.0.md)
 	- 7.1. [XML](07.1.md)
 	- 7.2. [JSON](07.2.md)
 	- 7.3. [Regexp](07.3.md)
