@@ -4,11 +4,10 @@
 // If the text "Hello World" isn't shown, then setup your workspace again.
 package main
 
-import (
-	"fmt"
-	"mymath"
-)
 
+// این ساده‌ترین برنامه نوشته شده با زبان گو می ‌باشد
 func main() {
-	fmt.Printf("Hello, world.  Sqrt(2) = %v\n", mymath.Sqrt(2))
+	println("Hello, world.")
+	// به احتمال زیاد این قسمت از زبان فارسی رو ترمینال درست نمایش نمی دهد
+	println("سلام دنیا!")
 }
