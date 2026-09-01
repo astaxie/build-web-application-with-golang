@@ -27,7 +27,7 @@
 	- 4.5. [Dosya yükleme](04.5.md)
 	- 4.6. [Özet](04.6.md)
 - 5.[Veritabanı](05.0.md)
-	- 5.1. [veritabanı/sql arayüzü](05.1.md)
+	- 5.1. [database/sql arayüzü](05.1.md)
 	- 5.2. [MySQL](05.2.md)
 	- 5.3. [SQLite](05.3.md)
 	- 5.4. [PostgreSQL](05.4.md)
